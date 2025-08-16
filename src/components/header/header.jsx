@@ -12,6 +12,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { IoMdClose, IoIosArrowDown } from 'react-icons/io';
 
 const Header = () => {
+  const [hello, setHello] = useAuth();
   const { user, userData, logout } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [profile, setProfile] = useState(false);

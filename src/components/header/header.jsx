@@ -54,7 +54,6 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-  console.log(first);
 
   return (
     <header

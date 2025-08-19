@@ -36,15 +36,14 @@ const heroSection = () => {
     }, 5000);
   }, []);
   return (
-    <div className="  h-[600px] flex justify-center items-center gap-6">
+    <div className="h-[600px] flex justify-center items-center gap-6">
       <div className="relative">
         <img
           src={images[currentSlide]}
-          className="cursor-pointer h-[500px] object-cover rounded-xl"
+          className="shadow-xl cursor-pointer h-[500px] object-cover rounded-xl"
           alt=""
         />
 
-        {/* دکمه‌ها */}
         <button
           onClick={nextSlide}
           className="absolute rotate-90 left-2 top-1/2 text-black rounded-full"
@@ -59,7 +58,6 @@ const heroSection = () => {
           <IoIosArrowDown size={20} />
         </button>
 
-        {/* دات‌ها */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
           <div className="flex gap-2">
             {images.map((_, index) => (
@@ -78,14 +76,14 @@ const heroSection = () => {
         <div>
           <img
             src={banner1}
-            className="cursor-pointer h-[240px] object-cover rounded-xl"
+            className="shadow-xl cursor-pointer h-[240px] object-cover rounded-xl"
             alt=""
           />
         </div>
         <div>
           <img
             src={banner2}
-            className="cursor-pointer h-[240px] object-cover rounded-xl"
+            className="shadow-xl cursor-pointer h-[240px] object-cover rounded-xl"
             alt=""
           />
         </div>

@@ -54,7 +54,11 @@ const Login = () => {
       toast.success('با موفقیت وارد شدید');
       navigate('/');
     } catch (err) {
+<<<<<<< HEAD
       console.log(err.code);
+=======
+      console.log(err.code); // ببین چه کدی میده
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
 
       if (err.code === 'auth/network-request-failed') {
         setInternetError('لطفا به اینترنت متصل شوید');

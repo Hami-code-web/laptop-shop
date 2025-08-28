@@ -37,6 +37,7 @@ const heroSection = () => {
   }, []);
   return (
     <div className="h-[550px] max-w-7xl mx-auto flex items-center gap-6">
+    <div className="h-[600px] flex justify-center items-center gap-6">
       <div className="relative">
         <img
           src={images[currentSlide]}
@@ -62,7 +63,11 @@ const heroSection = () => {
           <div className="flex gap-2">
             {images.map((_, index) => (
               <div
+<<<<<<< HEAD
                 key={index} 
+=======
+                key={index}
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full cursor-pointer ${
                   currentSlide === index ? 'bg-red-500' : 'bg-gray-400'

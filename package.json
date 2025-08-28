@@ -12,7 +12,10 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "firebase": "^12.0.0",
+<<<<<<< HEAD
     "lucide-react": "^0.541.0",
+=======
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
@@ -28,12 +31,19 @@
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react-swc": "^3.10.2",
     "eslint": "^9.30.1",
+<<<<<<< HEAD
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "prettier": "^3.0.0-alpha.6",
+=======
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
     "vite": "^7.0.4"
   }
 }

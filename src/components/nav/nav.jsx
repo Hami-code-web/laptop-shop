@@ -15,7 +15,11 @@ const Nav = () => {
 
   return (
     <nav
+<<<<<<< HEAD
       className=" relative bg-[#393E46] mt-20 px-4 md:px-10 lg:px-20 h-14 flex justify-between items-center shadow-md shadow-stone-500 z-40 text-white"
+=======
+      className="relative bg-[#393E46] mt-20 px-4 md:px-10 lg:px-20 h-14 flex justify-between items-center shadow-md shadow-stone-500 z-40 text-white"
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
       dir="rtl"
     >
       <div className="lg:hidden text-sm flex justify-between">
@@ -28,10 +32,17 @@ const Nav = () => {
         <p className="hover:text-white cursor-pointer">شرایط اقساط</p>
       </div>
 
+<<<<<<< HEAD
       <div className=" hidden lg:flex justify-between w-full">
         <div className="flex gap-5 text-[.9rem]">
           <div
             className=" relative flex gap-2 items-center group cursor-pointer"
+=======
+      <div className="hidden lg:flex justify-between w-full">
+        <div className="flex gap-5 text-[.9rem]">
+          <div
+            className="relative flex gap-2 items-center group cursor-pointer"
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
@@ -41,7 +52,11 @@ const Nav = () => {
             />
             <span className="h-full bg-gray-400 w-[1px]" />
             {isOpen && (
+<<<<<<< HEAD
               <div className=" absolute rounded top-full right-0 w-[800px] bg-white text-black shadow-xl p-6 flex gap-10 rtl z-50">
+=======
+              <div className="absolute top-full right-0 w-[800px] bg-white text-black shadow-xl p-6 flex gap-10 rtl z-50">
+>>>>>>> 34abc3a00fa12276e2be7f50f78302dc58208691
                 {categories.map((category, idx) => (
                   <div key={idx}>
                     <h4 className="font-bold text-[#222831] mb-2">

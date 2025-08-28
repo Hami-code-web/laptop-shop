@@ -1,0 +1,123 @@
+{
+  "store": "فروشگاه آنلاین تجهیزات کامپیوتر",
+  "lastUpdated": "1402-08-14",
+  "currency": "تومان",
+  "products": [
+    {
+      "id": "M001",
+      "name": "ماوس بی‌سیم ارگونومیک",
+      "category": "ماوس",
+      "img": "./images/discountProducts/logitec.webp",
+      "price": 850000,
+      "discount": 15,
+      "finalPrice": 722500,
+      "brand": "لاجیتک",
+      "inStock": true,
+      "features": [
+        "حسگر نوری",
+        "باتری قابل شارژ",
+        "گیرنده USB",
+        "طراحی ارگونومیک"
+      ],
+      "rating": 4.5,
+      "stockCount": 27,
+      "colors": ["مشکی", "سفید", "نقره‌ای"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "M002",
+      "name": "ماوس گیمینگ RGB",
+      "category": "ماوس",
+      "price": 1200000,
+      "discount": 20,
+      "finalPrice": 960000,
+      "brand": "ریزر",
+      "inStock": true,
+      "features": ["DPI 16000", "7 دکمه programmable", "نورپردازی RGB", "سیمی"],
+      "rating": 4.7,
+      "stockCount": 15,
+      "colors": ["مشکی"],
+      "warranty": "18 ماه"
+    },
+    {
+      "id": "K001",
+      "name": "کیبورد مکانیکی گیمینگ",
+      "category": "کیبورد",
+      "price": 2200000,
+      "discount": 10,
+      "finalPrice": 1980000,
+      "brand": "کورسیر",
+      "inStock": true,
+      "features": [
+        "سوئیچ Cherry MX Red",
+        "نورپردازی RGB",
+        "ضد آب",
+        "صفحه عددی"
+      ],
+      "rating": 4.8,
+      "stockCount": 12,
+      "colors": ["مشکی"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "K002",
+      "name": "کیبورد بی‌سیم استاندارد",
+      "category": "کیبورد",
+      "price": 950000,
+      "discount": 5,
+      "finalPrice": 902500,
+      "brand": "لاجیتک",
+      "inStock": false,
+      "features": [
+        "اتصال بلوتوث",
+        "باتری طولانی مدت",
+        "طراحی کم صدا",
+        "ارگونومیک"
+      ],
+      "rating": 4.3,
+      "stockCount": 0,
+      "colors": ["مشکی", "سفید"],
+      "warranty": "12 ماه"
+    },
+    {
+      "id": "H001",
+      "name": "هدست گیمینگ حرفه‌ای",
+      "category": "هدست",
+      "price": 1800000,
+      "discount": 25,
+      "finalPrice": 1350000,
+      "brand": "استیل سریز",
+      "inStock": true,
+      "features": [
+        "7.1 surround",
+        "میکروفون حذف نویز",
+        "نورپردازی RGB",
+        "پشتی فوم حافظه"
+      ],
+      "rating": 4.6,
+      "stockCount": 8,
+      "colors": ["مشکی", "سفید"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "H002",
+      "name": "هدفون بی‌سیم حذف نویز",
+      "category": "هدست",
+      "price": 3500000,
+      "discount": 15,
+      "finalPrice": 2975000,
+      "brand": "سونی",
+      "inStock": true,
+      "features": [
+        "حذف نویز فعال",
+        "باتری 30 ساعته",
+        "بلوتوث 5.0",
+        "تا شو سریع"
+      ],
+      "rating": 4.9,
+      "stockCount": 6,
+      "colors": ["مشکی", "نقره‌ای"],
+      "warranty": "18 ماه"
+    }
+  ]
+}

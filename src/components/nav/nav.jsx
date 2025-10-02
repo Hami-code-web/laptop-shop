@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowDown, IoMdMenu, IoMdClose } from 'react-icons/io';
 import { MdPercent } from 'react-icons/md';
+import { FaFire } from 'react-icons/fa';
+import { IoIosHelpCircleOutline } from 'react-icons/io';
+import { IoShieldCheckmarkSharp } from 'react-icons/io5';
+import { MdOutlineComputer } from 'react-icons/md';
+import { IoMdInformationCircleOutline } from 'react-icons/io';
 import categories from '../../data/categories.json';
 
 const Nav = () => {
@@ -15,7 +20,7 @@ const Nav = () => {
 
   return (
     <nav
-      className="relative bg-[#393E46] mt-20 px-4 md:px-10 lg:px-20 h-14 flex justify-between items-center shadow-md shadow-stone-500 z-40 text-white"
+      className=" relative bg-[#393E46] mt-20 px-4 md:px-10 lg:px-20 h-14 flex justify-between items-center shadow-md shadow-stone-500 z-40 text-white"
       dir="rtl"
     >
       <div className="lg:hidden text-sm flex justify-between">
@@ -24,14 +29,20 @@ const Nav = () => {
         </button>
       </div>
       <div className=" flex lg:hidden gap-2 text-[.8rem] font-light">
-        <p className="hover:text-white cursor-pointer">فروش ویژه</p>
-        <p className="hover:text-white cursor-pointer">شرایط اقساط</p>
+        <div className="flex items-center gap-[2px]">
+          <p className="hover:text-white cursor-pointer">فروش ویژه</p>
+          <FaFire size={14} />
+        </div>
+        <div className="flex items-center gap-[2px]">
+          <p className="hover:text-white cursor-pointer">شرایط اقساط</p>
+          <MdPercent size={14} />
+        </div>
       </div>
 
-      <div className="hidden lg:flex justify-between w-full">
+      <div className=" hidden lg:flex justify-between w-full">
         <div className="flex gap-5 text-[.9rem]">
           <div
-            className="relative flex gap-2 items-center group cursor-pointer"
+            className=" relative flex gap-2 items-center group cursor-pointer"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
@@ -41,7 +52,7 @@ const Nav = () => {
             />
             <span className="h-full bg-gray-400 w-[1px]" />
             {isOpen && (
-              <div className="absolute top-full right-0 w-[800px] bg-white text-black shadow-xl p-6 flex gap-10 rtl z-50">
+              <div className=" absolute rounded top-full right-0 w-[800px] bg-white text-black shadow-xl p-6 flex gap-10 rtl z-50">
                 {categories.map((category, idx) => (
                   <div key={idx}>
                     <h4 className="font-bold text-[#222831] mb-2">
@@ -63,23 +74,27 @@ const Nav = () => {
             )}
           </div>
           <div className="flex gap-5 items-center font-light text-sm text-gray-400">
-            <Link className="hover:text-white transition-colors duration-200">
+            <Link className="hover:text-white flex gap-1 transition-colors duration-200">
+              <IoMdInformationCircleOutline size={18} />
               راهنمای خرید
             </Link>
-            <Link className="hover:text-white transition-colors duration-200">
+            <Link className="hover:text-white flex gap-1 transition-colors duration-200">
+              <MdOutlineComputer size={18} />
               خرید کالای کارکرده
             </Link>
-            <Link className="hover:text-white transition-colors duration-200">
+            <Link className="hover:text-white flex gap-1 transition-colors duration-200">
+              <IoIosHelpCircleOutline size={18} />
               سوالات متداول
             </Link>
-            <Link className="hover:text-white transition-colors duration-200">
+            <Link className="hover:text-white flex gap-1 transition-colors duration-200">
+              <IoShieldCheckmarkSharp size={18} />
               شرایط گارانتی
             </Link>
           </div>
         </div>
         <div className="flex gap-5 text-sm font-light text-gray-400">
           <div className="flex gap-1 items-center cursor-pointer hover:text-white">
-            <MdPercent />
+            <FaFire />
             <span>فروش ویژه</span>
           </div>
           <div className="flex gap-1 items-center cursor-pointer hover:text-white">
@@ -128,10 +143,22 @@ const Nav = () => {
           <hr className="border-gray-600 my-3" />
 
           <div className="space-y-2">
-            <Link className="block hover:text-white">راهنمای خرید</Link>
-            <Link className="block hover:text-white">خرید کالای کارکرده</Link>
-            <Link className="block hover:text-white">سوالات متداول</Link>
-            <Link className="block hover:text-white">شرایط گارانتی</Link>
+            <div className="flex gap-[5px] items-center">
+              <IoIosHelpCircleOutline size={18} />
+              <Link className="block hover:text-white">راهنمای خرید</Link>
+            </div>
+            <div className="flex gap-[5px] items-center">
+              <MdOutlineComputer size={18} />
+              <Link className="block hover:text-white">خرید کالای کارکرده</Link>
+            </div>
+            <div className="flex gap-[5px] items-center">
+              <IoMdInformationCircleOutline size={18} />
+              <Link className="block hover:text-white">سوالات متداول</Link>
+            </div>
+            <div className="flex gap-[5px] items-center">
+              <IoShieldCheckmarkSharp size={18} />
+              <Link className="block hover:text-white">شرایط گارانتی</Link>
+            </div>
           </div>
         </div>
       )}

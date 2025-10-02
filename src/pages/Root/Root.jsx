@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/header/header';
 import Nav from '../../components/nav/nav';
 import HeroSection from '../../components/heroSection/heroSection';
+import DiscountProducts from '../../components/discountProducts';
 
 const Root = () => {
   return (
@@ -9,6 +10,7 @@ const Root = () => {
       <Header />
       <Nav />
       <HeroSection />
+      <DiscountProducts />
     </div>
   );
 };

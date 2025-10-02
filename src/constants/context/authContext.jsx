@@ -8,33 +8,37 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
 
       if (currentUser) {
-        const docRef = doc(db, 'users', currentUser.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          setUserData(docSnap.data());
-        } else {
+        try {
+          const docRef = doc(db, 'users', currentUser.uid);
+          const docSnap = await getDoc(docRef);
+          setUserData(docSnap.exists() ? docSnap.data() : null);
+        } catch (err) {
+          console.error('Error fetching user data:', err);
           setUserData(null);
         }
       } else {
         setUserData(null);
       }
+
+      setLoading(false);
     });
 
     return () => unsubscribe();
   }, []);
 
-  const logout = () => {
-    auth.signOut();
+  const logout = async () => {
+    await auth.signOut();
   };
 
   return (
-    <AuthContext.Provider value={{ user, userData, logout }}>
+    <AuthContext.Provider value={{ user, userData, loading, logout }}>
       {children}
     </AuthContext.Provider>
   );

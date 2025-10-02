@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { auth, db } from '../../constants/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import {
   GoogleAuthProvider,
   signInWithPopup,
   createUserWithEmailAndPassword,
-} from 'firebase/auth'; // 🔹 ایمپورت کامل
+} from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import { useNavigate, Link } from 'react-router-dom';
 import Spinner from '../../components/loading/spinner';

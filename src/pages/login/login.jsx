@@ -14,67 +14,32 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const translateFirebaseError = (code) => {
-    switch (code) {
-      case 'auth/invalid-email':
-        return { field: 'email', message: ' ایمیل معتبر نیست' };
-      case 'auth/user-not-found':
-        return { field: 'email', message: 'کاربری با این ایمیل پیدا نشد' };
-      case 'auth/wrong-password':
-        return { field: 'pass', message: 'رمز عبور اشتباه است' };
-      case 'auth/missing-password':
-        return { field: 'pass', message: ' رمز عبور را وارد کنید' };
-      default:
-        return { field: null, message: 'خطایی رخ داده است. دوباره تلاش کنید' };
-    }
-  };
-
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrors({ email: '', pass: '' });
 
-    let hasError = false;
-
-    if (!email.trim()) {
-      setErrors((prev) => ({ ...prev, email: ' ایمیل خود را وارد کنید' }));
-      hasError = true;
+    if (!email.trim() || !pass.trim()) {
+      if (!email.trim())
+        setErrors((prev) => ({ ...prev, email: ' ایمیل خود را وارد کنید' }));
+      if (!pass.trim())
+        setErrors((prev) => ({ ...prev, pass: ' رمز عبور خود را وارد کنید' }));
+      return;
     }
-    if (!pass.trim()) {
-      setErrors((prev) => ({
-        ...prev,
-        pass: ' رمز عبور خود را وارد کنید',
-      }));
-      hasError = true;
-    }
-    if (hasError) return;
 
     setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email.trim(), pass.trim());
       toast.success('با موفقیت وارد شدید');
       navigate('/');
+      // ❌ اینجا نباید setUserData صدا زده بشه
     } catch (err) {
-      console.log(err.code); // ببین چه کدی میده
-
+      console.log(err.code);
       if (err.code === 'auth/network-request-failed') {
         setInternetError('لطفا به اینترنت متصل شوید');
         setTimeout(() => setInternetError(''), 5000);
         return;
       }
-
-      switch (err.code) {
-        case 'auth/user-not-found':
-          toast.error('کاربری با این ایمیل پیدا نشد');
-          break;
-        case 'auth/wrong-password':
-          toast.error('رمز عبور اشتباه است');
-          break;
-        case 'auth/invalid-email':
-          toast.error('ایمیل وارد شده معتبر نیست');
-          break;
-        default:
-          toast.error('خطای ناشناخته‌ای رخ داده است');
-      }
+      toast.error('رمز عبور یا ایمیل اشتباه است');
     } finally {
       setLoading(false);
     }

@@ -1,4 +1,31 @@
 @import 'tailwindcss';
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgb(185, 182, 182);
+  opacity: 0.9;
+  margin: 0 7px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.swiper-pagination-bullet-active {
+  background: rgb(94, 92, 92);
+  transition: all 0.3s ease;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 @font-face {
   font-family: 'peydeWeb';
   src: url('./assets/fonts/PeydaWebFaNum-Regular.woff2') format('woff2');

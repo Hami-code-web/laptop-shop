@@ -12,7 +12,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { IoMdClose, IoIosArrowDown } from 'react-icons/io';
 
 const Header = () => {
-  const { user, userData, logout } = useAuth();
+  const { user, userData, logout, loading } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [profile, setProfile] = useState(false);
   const [openPopUp, setOpenPopUp] = useState(false);
@@ -74,7 +74,6 @@ const Header = () => {
               />
             </div>
             <hr className="mt-2.5 mb-2.5 h-[1px] w-[100%] bg-gray-300" />
-
             <div className="flex justify-between items-center gap-2">
               <p className="text-black">
                 با خروج از حساب خود نمی توانید خرید کنید و نیاز به ساخت حساب
@@ -152,28 +151,35 @@ const Header = () => {
 
             <div
               ref={menuRef}
-              className={`${profile ? 'flex' : 'hidden'} absolute flex-col left-36 top-16 rounded-2xl bg-white py-4 space-y-3 text-[1.2rem] font-semibold shadow-gray-400 shadow-md w-[15%] h-min`}
+              className={`${
+                profile ? 'flex' : 'hidden'
+              } absolute flex-col left-1/2 -translate-x-1/2 md:left-36 md:translate-x-0 top-16 
+     rounded-2xl bg-white py-4 space-y-3 text-[1.1rem] font-semibold 
+     shadow-gray-400 shadow-md 
+     w-[90%] sm:w-[70%] md:w-[40%] lg:w-[20%] h-min`}
             >
-              <div className="px-3 text-gray-600">
-                {userData
-                  ? `${userData.firstName} ${userData.lastName}`
-                  : 'کاربر'}
+              <div className="px-3 text-gray-600 truncate text-right md:text-right">
+                {loading
+                  ? 'در حال بارگذاری...'
+                  : userData
+                    ? `${userData.firstName} ${userData.lastName}`
+                    : 'کاربر'}
               </div>
               <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
 
-              <div className="cursor-pointer flex gap-2 items-center px-7 text-[1.1rem] text-gray-800 font-medium">
+              <div className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium">
                 <MdOutlineShoppingBag size={22} /> سفارش ها
               </div>
               <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
 
-              <div className="cursor-pointer flex gap-2 items-center px-7 text-[1.1rem] text-gray-800 font-medium">
+              <div className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium">
                 <FaRegHeart size={22} /> علاقه مندی ها
               </div>
-              <hr className="h-[1px] w-[90%] mx-auto bg-gray-800" />
+              <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
 
               <div
                 onClick={() => setOpenPopUp(true)}
-                className="cursor-pointer flex gap-2 items-center px-7 text-[1.1rem] text-gray-800 font-medium"
+                className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium"
               >
                 <MdLogout size={22} /> خروج از حساب کاربری
               </div>

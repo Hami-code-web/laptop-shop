@@ -30,6 +30,7 @@ const DiscountProducts = () => {
           <p className="text-2xl font-bold">محصولات فروش ویژه</p>
           <div className="cursor-pointer flex items-center gap-1 hover:text-teal-600 transition-colors">
             <p className="text-sm font-semibold">مشاهده همه</p>
+            <IoIosArrowForward className='rotate-180' />
           </div>
         </div>
 

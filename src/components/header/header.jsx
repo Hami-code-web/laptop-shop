@@ -154,9 +154,9 @@ const Header = () => {
               className={`${
                 profile ? 'flex' : 'hidden'
               } absolute flex-col left-1/2 -translate-x-1/2 md:left-36 md:translate-x-0 top-16 
-     rounded-2xl bg-white py-4 space-y-3 text-[1.1rem] font-semibold 
-     shadow-gray-400 shadow-md 
-     w-[90%] sm:w-[70%] md:w-[40%] lg:w-[20%] h-min`}
+                rounded-2xl bg-white py-4 space-y-3 text-[1.1rem] font-semibold 
+                shadow-gray-400 shadow-md 
+                w-[90%] sm:w-[70%] md:w-[40%] lg:w-[20%] h-min`}
             >
               <div className="px-3 text-gray-600 truncate text-right md:text-right">
                 {loading
@@ -166,11 +166,10 @@ const Header = () => {
                     : 'کاربر'}
               </div>
               <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
-
               <div className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium">
                 <MdOutlineShoppingBag size={22} /> سفارش ها
               </div>
-              <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
+              <hr className="h-[1px] w-[90%] mx-auto " />
 
               <div className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium">
                 <FaRegHeart size={22} /> علاقه مندی ها

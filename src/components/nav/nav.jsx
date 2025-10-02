@@ -25,7 +25,7 @@ const Nav = () => {
     >
       <div className="lg:hidden text-sm flex justify-between">
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
+          {mobileMenuOpen ? <IoMdClose className='cursor-pointer' size={24} /> : <IoMdMenu className='cursor-pointer' size={24} />}
         </button>
       </div>
       <div className=" flex lg:hidden gap-2 text-[.8rem] font-light">

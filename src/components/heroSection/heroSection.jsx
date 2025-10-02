@@ -49,7 +49,7 @@ const ResposiveHeroSection = () => {
               swiper.navigation.update();
             });
           }}
-          className="h-full rounded-xl overflow-hidden"
+          className="h-full object-contain rounded-xl overflow-hidden"
         >
           {sliderImages.map((img, index) => (
             <SwiperSlide key={index} className="h-full">

@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+.animate-loading-bar {
+  animation: loading-bar 1s linear infinite;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgb(185, 182, 182);
+  opacity: 0.9;
+  margin: 0 7px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.swiper-pagination-bullet-active {
+  background: rgb(94, 92, 92);
+  transition: all 0.3s ease;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@font-face {
+  font-family: 'peydeWeb';
+  src: url('./assets/fonts/PeydaWebFaNum-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'peydeWeb', sans-serif;
+}
+
+.rtl-toast {
+  font-family: 'peydeWeb' !important;
+  direction: rtl;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.rtl-toast-body {
+  font-family: 'peydaWeb' !important;
+  direction: rtl;
+  text-align: right;
+}

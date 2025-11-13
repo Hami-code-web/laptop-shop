@@ -1,0 +1,160 @@
+{
+  "store": "فروشگاه آنلاین تجهیزات کامپیوتر",
+  "lastUpdated": "1402-08-14",
+  "currency": "تومان",
+  "products": [
+    {
+      "id": "M002",
+      "name": "ماوس گیمینگ RGB",
+      "category": "ماوس",
+      "img": "/images/discountProductsImages/razer-rgb.png",
+      "price": 1200000,
+      "discount": 20,
+      "finalPrice": 960000,
+      "brand": "ریزر",
+      "inStock": true,
+      "features": ["DPI 16000", "7 دکمه programmable", "نورپردازی RGB", "سیمی"],
+      "rating": 4.7,
+      "stockCount": 15,
+      "colors": ["مشکی"],
+      "warranty": "18 ماه"
+    },
+    {
+      "id": "K001",
+      "name": "کیبورد مکانیکی گیمینگ",
+      "category": "کیبورد",
+      "img": "/images/discountProductsImages/corsair-keyboard.jpg",
+      "price": 2200000,
+      "discount": 10,
+      "finalPrice": 1980000,
+      "brand": "کورسیر",
+      "inStock": true,
+      "features": [
+        "سوئیچ Cherry MX Red",
+        "نورپردازی RGB",
+        "ضد آب",
+        "صفحه عددی"
+      ],
+      "rating": 4.8,
+      "stockCount": 12,
+      "colors": ["مشکی"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "M001",
+      "name": "ماوس بی‌سیم ارگونومیک",
+      "category": "ماوس",
+      "img": "/images/discountProductsImages/logitec.webp",
+      "price": 850000,
+      "discount": 15,
+      "finalPrice": 722500,
+      "brand": "لاجیتک",
+      "inStock": true,
+      "features": [
+        "حسگر نوری",
+        "باتری قابل شارژ",
+        "گیرنده USB",
+        "طراحی ارگونومیک"
+      ],
+      "rating": 4.5,
+      "stockCount": 27,
+      "colors": ["مشکی", "سفید", "نقره‌ای"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "H001",
+      "name": "هدست گیمینگ حرفه‌ای",
+      "category": "هدست",
+      "img": "/images/discountProductsImages/steelseries-headset.webp",
+      "price": 1800000,
+      "discount": 25,
+      "finalPrice": 1350000,
+      "brand": "استیل سریز",
+      "inStock": true,
+      "features": [
+        "7.1 surround",
+        "میکروفون حذف نویز",
+        "نورپردازی RGB",
+        "پشتی فوم حافظه"
+      ],
+      "rating": 4.6,
+      "stockCount": 8,
+      "colors": ["مشکی", "سفید"],
+      "warranty": "24 ماه"
+    },
+    {
+      "id": "MN001",
+      "name": "مانیتور گیمینگ 27 اینچ 165Hz",
+      "category": "مانیتور",
+      "img": "/images/discountProductsImages/rog-monitor.jfif",
+      "price": 9500000,
+      "discount": 12,
+      "finalPrice": 8360000,
+      "brand": "ایسوس",
+      "inStock": true,
+      "features": ["رزولوشن QHD", "165Hz", "IPS", "HDR"],
+      "rating": 4.8,
+      "stockCount": 10,
+      "colors": ["مشکی"],
+      "warranty": "36 ماه"
+    },
+    {
+      "id": "K002",
+      "name": "کیبورد بی‌سیم فول سایز",
+      "category": "کیبورد",
+      "img": "/images/discountProductsImages/logitec-keyboard.jfif",
+      "price": 950000,
+      "discount": 5,
+      "finalPrice": 902500,
+      "brand": "لاجیتک",
+      "inStock": true,
+      "features": [
+        "اتصال بلوتوث",
+        "باتری طولانی مدت",
+        "طراحی کم صدا",
+        "ارگونومیک"
+      ],
+      "rating": 4.3,
+      "stockCount": 0,
+      "colors": ["مشکی", "سفید"],
+      "warranty": "12 ماه"
+    },
+    {
+      "id": "H002",
+      "name": "هدفون بی‌سیم حذف نویز",
+      "category": "هدست",
+      "img": "/images/discountProductsImages/sony-headphone.jpg",
+      "price": 3500000,
+      "discount": 15,
+      "finalPrice": 2975000,
+      "brand": "سونی",
+      "inStock": true,
+      "features": [
+        "حذف نویز فعال",
+        "باتری 30 ساعته",
+        "بلوتوث 5.0",
+        "تا شو سریع"
+      ],
+      "rating": 4.9,
+      "stockCount": 6,
+      "colors": ["مشکی", "نقره‌ای"],
+      "warranty": "18 ماه"
+    },
+    {
+      "id": "MN002",
+      "name": "مانیتور اولتراواید 34 اینچ",
+      "category": "مانیتور",
+      "img": "/images/discountProductsImages/lg-ultrawide-monitor.webp",
+      "price": 15500000,
+      "discount": 10,
+      "finalPrice": 13950000,
+      "brand": "ال‌جی",
+      "inStock": true,
+      "features": ["رزولوشن UWQHD", "144Hz", "IPS", "پشتیبانی از G-Sync"],
+      "rating": 4.9,
+      "stockCount": 7,
+      "colors": ["مشکی", "نقره‌ای"],
+      "warranty": "24 ماه"
+    }
+  ]
+}

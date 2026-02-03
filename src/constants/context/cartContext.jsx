@@ -9,6 +9,7 @@ const cartContext = createContext();
 export const CartProvider = ({ children }) => {
   const { user } = useAuth();
   const [cart, setCart] = useState([]);
+  const [toastMessage, setToastMessage] = useState(null);
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -61,20 +62,27 @@ export const CartProvider = ({ children }) => {
     saveCart();
   }, [cart, user]);
 
-  let toastShown = false;
+  useEffect(() => {
+    if (toastMessage) {
+      toast[toastMessage.includes('وجود دارد') ? 'success' : 'warn'](
+        toastMessage
+      );
+      setToastMessage(null);
+    } else if (toastMessage) {
+      toast[toastMessage.includes('موفقیت آمیز') ? 'warn' : 'succes'](
+        toastMessage
+      );
+    }
+  }, [toastMessage]);
 
   const addToCart = (product) => {
     setCart((prev) => {
       const exists = prev.find((item) => item.id === product.id);
       if (exists) {
-        toast.info('این محصول در سبد خرید شما وجود دارد.');
+        toast.warn('این محصول در سبد خرید شما وجود دارد.');
         return prev;
       }
-      if (!toastShown) {
-        toast.success('محصول با موفقیت به سبد خرید اضافه شد!');
-        toastShown = true;
-        setTimeout(() => (toastShown = false), 100);
-      }
+      toast.success('محصول با موفقیت به سبد خرید اضافه شد!');
       return [...prev, { ...product, quantity: 1 }];
     });
   };
@@ -82,12 +90,13 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
+
   const increaseQuantity = (id) => {
     setCart((prevCart) =>
       prevCart.map((item) => {
         if (item.id === id) {
           if (item.quantity >= 3) {
-            toast.warning('حداکثر ۳ عدد از هر محصول قابل افزودن است.');
+            setToastMessage('حداکثر ۳ عدد از هر محصول قابل افزودن است.');
             return item;
           }
           return { ...item, quantity: item.quantity + 1 };

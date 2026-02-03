@@ -3,7 +3,6 @@ import Root from '../pages/Root/Root';
 import SignUp from '../pages/signUp/signUp';
 import Login from '../pages/login/login';
 import Cart from '../pages/cart/cart';
-import ProductDetails from '../pages/productDetails/productDetails';
 
 const router = createBrowserRouter([
   {
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
   {
     path: '/cart',
     element: <Cart />,
-  },
-  {
-    path: '/product/:id',
-    element: <ProductDetails />,
   },
 ]);
 

@@ -28,7 +28,7 @@ const GamingLaptop = ({ product }) => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative max-w-7xl mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
+    <div className=" select-none relative max-w-7xl mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
       <button
         onClick={() => swiperRef.current.slidePrev()}
         className="cursor-pointer hidden lg:flex absolute rounded-l-2xl -right-3 top-[229.4px] bg-teal-800 shadow-md p-3 z-1"

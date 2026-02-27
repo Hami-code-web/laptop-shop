@@ -5,25 +5,37 @@
   "products": [
     {
       "id": "M002",
-      "name": "ماوس گیمینگ RGB",
+      "name": "ماوس مخصوص بازی ریزر مدل DeathAdder Essential",
+      "enName": "Razer DeathAdder Essential Gaming Mouse",
       "category": "ماوس",
-      "img": "/images/discountProductsImages/razer-rgb.png",
-      "price": 1200000,
+      "img": "/images/discountProductsImages/razer/razer-rgb.png",
+      "images": [
+        "/images/discountProductsImages/razer/razer-rgb1.png",
+        "/images/discountProductsImages/razer/razer-rgb2.png",
+        "/images/discountProductsImages/razer/razer-rgb3.png"
+      ],
+      "price": 3200000,
       "discount": 20,
-      "finalPrice": 960000,
+      "finalPrice": 2960000,
       "brand": "ریزر",
       "inStock": true,
       "features": ["DPI 16000", "7 دکمه programmable", "نورپردازی RGB", "سیمی"],
       "rating": 4.7,
-      "stockCount": 15,
+      "stockCount": 5,
       "colors": ["مشکی"],
       "warranty": "18 ماه"
     },
     {
       "id": "K001",
-      "name": "کیبورد مکانیکی گیمینگ",
+      "name": "کیبورد مخصوص بازی کورسیر مدل K60 RGB Pro Low Profile Mechanical",
+      "enName": "Corsair K60 RGB Pro Low Profile Mechanical Keyboard",
       "category": "کیبورد",
-      "img": "/images/discountProductsImages/corsair-keyboard.jpg",
+      "img": "/images/discountProductsImages/corsair/corsair-keyboard.jpg",
+      "images": [
+        "/images/discountProductsImages/corsair/corsair-keyboard1.jpg",
+        "/images/discountProductsImages/corsair/corsair-keyboard2.jpg",
+        "/images/discountProductsImages/corsair/corsair-keyboard3.jpg"
+      ],
       "price": 2200000,
       "discount": 10,
       "finalPrice": 1980000,
@@ -36,15 +48,21 @@
         "صفحه عددی"
       ],
       "rating": 4.8,
-      "stockCount": 12,
+      "stockCount": 2,
       "colors": ["مشکی"],
       "warranty": "24 ماه"
     },
     {
       "id": "M001",
-      "name": "ماوس بی‌سیم ارگونومیک",
+      "name": "ماوس لاجیتک مدل MX Vertical",
+      "enName": "Logitech MX Vertical Mouse",
       "category": "ماوس",
-      "img": "/images/discountProductsImages/logitec.webp",
+      "img": "/images/discountProductsImages/logitech/logitec.webp",
+      "images": [
+        "/images/discountProductsImages/logitech/logitec1.webp",
+        "/images/discountProductsImages/logitech/logitec2.webp",
+        "/images/discountProductsImages/logitech/logitec3.webp"
+      ],
       "price": 850000,
       "discount": 15,
       "finalPrice": 722500,
@@ -57,15 +75,21 @@
         "طراحی ارگونومیک"
       ],
       "rating": 4.5,
-      "stockCount": 27,
+      "stockCount": 7,
       "colors": ["مشکی", "سفید", "نقره‌ای"],
       "warranty": "24 ماه"
     },
     {
       "id": "H001",
-      "name": "هدست گیمینگ حرفه‌ای",
+      "name": "هدست گیمینگ استیل سریز مدل ARCTIS NOVA 1",
+      "enName": "SteelSeries Arctis Nova 1 Gaming Headset",
       "category": "هدست",
-      "img": "/images/discountProductsImages/steelseries-headset.webp",
+      "img": "/images/discountProductsImages/steelseries/steelseries-headset.webp",
+      "images": [
+        "/images/discountProductsImages/steelseries/steelseries-headset1.webp",
+        "/images/discountProductsImages/steelseries/steelseries-headset2.webp",
+        "/images/discountProductsImages/steelseries/steelseries-headset3.webp"
+      ],
       "price": 1800000,
       "discount": 25,
       "finalPrice": 1350000,
@@ -84,9 +108,15 @@
     },
     {
       "id": "MN001",
-      "name": "مانیتور گیمینگ 27 اینچ 165Hz",
+      "name": "مانیتور طراحی ایسوس مدل ProArt Display PA278QV سایز 27 اینچ",
+      "enName": "Asus ProArt Display PA278QV 27 Inch Design Monitor",
       "category": "مانیتور",
-      "img": "/images/discountProductsImages/rog-monitor.jfif",
+      "img": "/images/discountProductsImages/asus/rog-monitor.jfif",
+      "images": [
+        "/images/discountProductsImages/asus/rog-monitor1.jfif",
+        "/images/discountProductsImages/asus/rog-monitor2.jfif",
+        "/images/discountProductsImages/asus/rog-monitor3.jfif"
+      ],
       "price": 9500000,
       "discount": 12,
       "finalPrice": 8360000,
@@ -94,19 +124,25 @@
       "inStock": true,
       "features": ["رزولوشن QHD", "165Hz", "IPS", "HDR"],
       "rating": 4.8,
-      "stockCount": 10,
+      "stockCount": 4,
       "colors": ["مشکی"],
       "warranty": "36 ماه"
     },
     {
       "id": "K002",
-      "name": "کیبورد بی‌سیم فول سایز",
+      "name": "کیبورد کیکورن مدل K3 Max RGB Red Switch",
+      "enName": "Keychron K3 Max RGB Red Switch Keyboard",
       "category": "کیبورد",
-      "img": "/images/discountProductsImages/logitec-keyboard.jfif",
-      "price": 950000,
+      "img": "/images/discountProductsImages/keychron/keychron-keyboard.jfif",
+      "images": [
+        "/images/discountProductsImages/keychron/keychron-keyboard1.jfif",
+        "/images/discountProductsImages/keychron/keychron-keyboard2.jfif",
+        "/images/discountProductsImages/keychron/keychron-keyboard3.jfif"
+      ],
+      "price": 19500000,
       "discount": 5,
-      "finalPrice": 902500,
-      "brand": "لاجیتک",
+      "finalPrice": 19025000,
+      "brand": "کیکرون",
       "inStock": true,
       "features": [
         "اتصال بلوتوث",
@@ -115,15 +151,21 @@
         "ارگونومیک"
       ],
       "rating": 4.3,
-      "stockCount": 0,
+      "stockCount": 3,
       "colors": ["مشکی", "سفید"],
       "warranty": "12 ماه"
     },
     {
       "id": "H002",
-      "name": "هدفون بی‌سیم حذف نویز",
+      "name": "هدفون بلوتوثی سونی مدل WH-CH520",
+      "enName": "Sony WH-CH520 Wireless Headphones",
       "category": "هدست",
-      "img": "/images/discountProductsImages/sony-headphone.jpg",
+      "img": "/images/discountProductsImages/sony/sony-headphone.jpg",
+      "images": [
+        "/images/discountProductsImages/sony/sony-headphone1.jpg",
+        "/images/discountProductsImages/sony/sony-headphone2.jpg",
+        "/images/discountProductsImages/sony/sony-headphone3.jpg"
+      ],
       "price": 3500000,
       "discount": 15,
       "finalPrice": 2975000,
@@ -142,18 +184,31 @@
     },
     {
       "id": "MN002",
-      "name": "مانیتور اولتراواید 34 اینچ",
+      "name": "مانیتور ال جی مدل 29WQ600-W سایز 29 اینچ",
+      "enName": "LG 29WQ600-W 29 Inch Monitor",
       "category": "مانیتور",
-      "img": "/images/discountProductsImages/lg-ultrawide-monitor.webp",
-      "price": 15500000,
-      "discount": 10,
-      "finalPrice": 13950000,
-      "brand": "ال‌جی",
+      "img": "/images/discountProductsImages/lg/lg-ultrawide-monitor.webp",
+      "images": [
+        "/images/discountProductsImages/lg/lg-ultrawide-monitor1.webp",
+        "/images/discountProductsImages/lg/lg-ultrawide-monitor2.webp",
+        "/images/discountProductsImages/lg/lg-ultrawide-monitor3.webp"
+      ],
+      "price": 11200000,
+      "discount": 8,
+      "finalPrice": 10304000,
+      "brand": "ال جی",
       "inStock": true,
-      "features": ["رزولوشن UWQHD", "144Hz", "IPS", "پشتیبانی از G-Sync"],
-      "rating": 4.9,
-      "stockCount": 7,
-      "colors": ["مشکی", "نقره‌ای"],
+      "features": [
+        "رزولوشن UltraWide FHD (2560×1080)",
+        "پنل IPS",
+        "نرخ نوسازی 100Hz",
+        "HDR10",
+        "AMD FreeSync",
+        "نسبت تصویر 21:9"
+      ],
+      "rating": 4.7,
+      "stockCount": 6,
+      "colors": ["سفید", "نقره‌ای"],
       "warranty": "24 ماه"
     }
   ]

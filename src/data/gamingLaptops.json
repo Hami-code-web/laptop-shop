@@ -4,112 +4,192 @@
   "currency": "تومان",
   "products": [
     {
-      "id": 1,
-      "name": "ایسوس ROG Strix G16",
-      "brand": "ایسوس (ASUS)",
+      "id": "L001",
+      "name": "لپتاپ ایسوس ROG Strix G16",
+      "enName": "Ausus ROG Strix G16",
+      "brand": "ایسوس",
       "category": "لپ‌تاپ گیمینگ",
+
       "price": 78000000,
+      "finalPrice": 69000000,
+      "discount": 12,
+
       "cpu": "Intel Core i7-13650HX",
       "gpu": "NVIDIA RTX 4060 8GB",
       "ram": "16GB DDR5",
       "storage": "1TB SSD",
       "screen": "16\" FHD+ 165Hz",
-      "img": "/images/gamingLaptopsImages/rog-G16.jfif",
+
+      "img": "/images/gamingLaptopsImages/rog/rog-G16.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/rog/rog1-G16.jfif",
+        "/images/gamingLaptopsImages/rog/rog2-G16.jpeg",
+        "/images/gamingLaptopsImages/rog/rog3-G16.jpeg"
+      ],
+
       "description": "لپ‌تاپ گیمینگ ایسوس با طراحی خفن، کارت گرافیک RTX 4060 و سیستم خنک‌کننده قوی برای بازی‌های سنگین.",
-      "rating": 4.8,
-      "inStock": true,
-      "stockCount": 7,
-      "warranty": "24 ماه"
-    },
-    {
-      "id": 2,
-      "name": "ام‌اس‌آی Katana 15",
-      "brand": "ام‌اس‌آی (MSI)",
-      "category": "لپ‌تاپ گیمینگ",
-      "price": 72000000,
-      "cpu": "Intel Core i7-13620H",
-      "gpu": "NVIDIA RTX 4060 8GB",
-      "ram": "16GB DDR5",
-      "storage": "1TB SSD",
-      "screen": "15.6\" FHD 144Hz",
-      "img": "/images/gamingLaptopsImages/msi-katana.jfif",
-      "description": "لپ‌تاپ خوش‌ساخت ام‌اس‌آی با صفحه‌نمایش 144Hz و عملکرد عالی برای گیمرها و برنامه‌نویسان حرفه‌ای.",
-      "rating": 4.7,
-      "inStock": true,
-      "stockCount": 10,
-      "warranty": "24 ماه"
-    },
-    {
-      "id": 3,
-      "name": "لنوو Legion 5 Pro",
-      "brand": "لنوو (Lenovo)",
-      "category": "لپ‌تاپ گیمینگ",
-      "price": 85000000,
-      "cpu": "AMD Ryzen 7 7745HX",
-      "gpu": "NVIDIA RTX 4070 8GB",
-      "ram": "32GB DDR5",
-      "storage": "1TB SSD",
-      "screen": "16\" QHD+ 165Hz",
-      "img": "/images/gamingLaptopsImages/legion-lenovo.jfif",
-      "description": "یکی از بهترین لپ‌تاپ‌های گیمینگ با پردازنده Ryzen قدرتمند و نمایشگر QHD با نرخ تازه‌سازی بالا.",
-      "rating": 4.9,
-      "inStock": true,
-      "stockCount": 5,
-      "warranty": "36 ماه"
-    },
-    {
-      "id": 4,
-      "name": "ایسر Predator Helios Neo 16",
-      "brand": "ایسر (Acer)",
-      "category": "لپ‌تاپ گیمینگ",
-      "price": 77000000,
-      "cpu": "Intel Core i7-13700HX",
-      "gpu": "NVIDIA RTX 4070 8GB",
-      "ram": "16GB DDR5",
-      "storage": "1TB SSD",
-      "screen": "16\" WQXGA 165Hz",
-      "img": "/images/gamingLaptopsImages/predator-aser.jfif",
-      "description": "هیولای گیمینگ ایسر با عملکرد خیره‌کننده و طراحی چشم‌نواز مخصوص اجرای بازی‌های سنگین.",
+
       "rating": 4.8,
       "inStock": true,
       "stockCount": 8,
       "warranty": "24 ماه"
     },
+
     {
-      "id": 5,
-      "name": "ایسوس TUF Gaming F15",
-      "brand": "ایسوس (ASUS)",
+      "id": "L002",
+      "name": "لپتاپ ام‌ اس‌ آی Katana 15",
+      "enName": "MSI Katana 15",
+      "brand": "ام‌اس‌آی",
       "category": "لپ‌تاپ گیمینگ",
-      "price": 65000000,
+
+      "price": 100000000,
+      "finalPrice": 72000000,
+      "discount": 28,
+
       "cpu": "Intel Core i7-13620H",
       "gpu": "NVIDIA RTX 4060 8GB",
       "ram": "16GB DDR5",
       "storage": "1TB SSD",
       "screen": "15.6\" FHD 144Hz",
-      "img": "/images/gamingLaptopsImages/tuf-asus.jfif",
-      "description": "لپ‌تاپ گیمینگ ایسوس سری TUF با کارت گرافیک RTX 4060، پردازنده نسل ۱۳ و نمایشگر 144Hz مناسب بازی‌های سنگین.",
+
+      "img": "/images/gamingLaptopsImages/msi/msi-katana.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/msi/msi-katana1.jfif",
+        "/images/gamingLaptopsImages/msi/msi-katana2.jfif",
+        "/images/gamingLaptopsImages/msi/msi-katana3.jfif"
+      ],
+
+      "description": "لپ‌تاپ خوش‌ ساخت ام‌اس‌آی با صفحه‌ی نمایش 144Hz و عملکرد عالی برای گیمرها.",
+
       "rating": 4.7,
       "inStock": true,
-      "stockCount": 12,
+      "stockCount": 2,
       "warranty": "24 ماه"
     },
+
     {
-      "id": 6,
-      "name": "ریزر Blade 16",
-      "brand": "ریزر (Razer)",
+      "id": "L003",
+      "name": "لپتاپ لنوو Legion 5 Pro",
+      "enName": "Lenovo Legion 5 Pro",
+      "brand": "لنوو",
       "category": "لپ‌تاپ گیمینگ",
-      "price": 96000000,
-      "cpu": "Intel Core i9-13950HX",
-      "gpu": "NVIDIA RTX 4080 12GB",
+
+      "price": 85000000,
+      "finalPrice": 80000000,
+      "discount": 6,
+
+      "cpu": "AMD Ryzen 7 7745HX",
+      "gpu": "NVIDIA RTX 4070 8GB",
       "ram": "32GB DDR5",
-      "storage": "1TB SSD",
-      "screen": "16\" Mini-LED UHD+ 240Hz",
-      "img": "/images/gamingLaptopsImages/blade-razer.jfif",
-      "description": "یکی از لوکس‌ترین لپ‌تاپ‌های گیمینگ ریزر با طراحی مینیمال و قدرت فوق‌العاده برای گیم و کارهای سنگین.",
+      "storage": "512GB حافظه داخلی",
+      "screen": "16\" QHD+ 165Hz",
+
+      "img": "/images/gamingLaptopsImages/lenovo/legion-lenovo.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/lenovo/legion-lenovo1.jfif",
+        "/images/gamingLaptopsImages/lenovo/legion-lenovo2.jfif",
+        "/images/gamingLaptopsImages/lenovo/legion-lenovo3.jfif"
+      ],
+
+      "description": "یکی از بهترین لپ‌تاپ‌های گیمینگ با پردازنده Ryzen قدرتمند.",
+
       "rating": 4.9,
       "inStock": true,
-      "stockCount": 4,
+      "stockCount": 7,
       "warranty": "36 ماه"
+    },
+
+    {
+      "id": "L004",
+      "name": "لپتاپ ایسر Predator Helios Neo 16",
+      "enName": "Aser Predator Helios Neo 16",
+      "brand": "ایسر",
+      "category": "لپ‌تاپ گیمینگ",
+
+      "price": 77000000,
+      "finalPrice": 72000000,
+      "discount": 6,
+
+      "cpu": "Intel Core i7-13700HX",
+      "gpu": "NVIDIA RTX 4070 8GB",
+      "ram": "16GB DDR5",
+      "storage": "1TB حافظه داخلی",
+      "screen": "16\" WQXGA 165Hz",
+
+      "img": "/images/gamingLaptopsImages/aser/predator-aser.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/aser/predator-aser1.jfif",
+        "/images/gamingLaptopsImages/aser/predator-aser2.jfif",
+        "/images/gamingLaptopsImages/aser/predator-aser3.jfif"
+      ],
+      "description": "هیولای گیمینگ ایسر با عملکرد خیره‌کننده.",
+
+      "rating": 4.8,
+      "inStock": true,
+      "stockCount": 5,
+      "warranty": "24 ماه"
+    },
+
+    {
+      "id": "L005",
+      "name": "لپتاپ ایسوس TUF Gaming F15",
+      "enName": "Asus TUF Gaming F15",
+      "brand": "ایسوس",
+      "category": "لپ‌تاپ گیمینگ",
+
+      "price": 65000000,
+      "finalPrice": 62500000,
+      "discount": 4,
+
+      "cpu": "Intel Core i7-13620H",
+      "gpu": "NVIDIA RTX 4060 8GB",
+      "ram": "16GB DDR5",
+      "storage": "1TB حافظه داخلی",
+      "screen": "15.6\" FHD 144Hz",
+
+      "img": "/images/gamingLaptopsImages/tuf/tuf-asus.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/tuf/tuf-asus1.jfif",
+        "/images/gamingLaptopsImages/tuf/tuf-asus2.jfif",
+        "/images/gamingLaptopsImages/tuf/tuf-asus3.jfif"
+      ],
+      "description": "لپ‌تاپ گیمینگ سری TUF با قدرت بالا.",
+
+      "rating": 4.7,
+      "inStock": true,
+      "stockCount": 2,
+      "warranty": "24 ماه"
+    },
+
+    {
+      "id": "L009",
+      "name": "لپ تاپ 16 اینچی اچ‌ پی مدل OMEN MAX Gaming",
+      "enName": "HP OMEN MAX Gaming 16-ah0097nr",
+      "brand": "اچ‌ پی",
+      "category": "لپ‌تاپ گیمینگ",
+
+      "price": 125000000,
+      "finalPrice": 119000000,
+      "discount": 5,
+
+      "cpu": "Intel Core Ultra 9 275HX",
+      "gpu": "NVIDIA RTX 5080 16GB GDDR7",
+      "ram": "32GB DDR5 5600MHz",
+      "storage": "1TB حافظه داخلی",
+      "screen": "16\" WQXGA (2560×1600) IPS 240Hz",
+
+      "img": "/images/gamingLaptopsImages/omen/omen-max.jfif",
+      "images": [
+        "/images/gamingLaptopsImages/omen/omen-max1.jfif",
+        "/images/gamingLaptopsImages/omen/omen-max2.jfif",
+        "/images/gamingLaptopsImages/omen/omen-max3.jfif"
+      ],
+      "description": "لپ‌تاپ گیمینگ فوق حرفه‌ای HP OMEN MAX 16 با پردازنده Core Ultra 9 و کارت گرافیک RTX 5080 مناسب اجرای جدیدترین بازی‌ها، رندرینگ و کارهای سنگین. دارای نمایشگر 240Hz با وضوح 2560×1600 و حافظه DDR5 پرسرعت.",
+
+      "rating": 4.9,
+      "inStock": true,
+      "stockCount": 5,
+      "warranty": "24 ماه"
     }
   ]
 }

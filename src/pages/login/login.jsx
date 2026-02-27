@@ -4,12 +4,14 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../constants/firebase';
 import { toast } from 'react-toastify';
 import Spinner from '../../components/loading/spinner';
+import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 
 const Login = () => {
   const [internetError, setInternetError] = useState();
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [errors, setErrors] = useState({ email: '', pass: '' });
+  const [eyeOpen, setEyeOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -34,7 +36,7 @@ const Login = () => {
     } catch (err) {
       console.log(err.code);
       if (err.code === 'auth/network-request-failed') {
-        setInternetError('لطفا به اینترنت متصل شوید');
+        setInternetError('این وبسایت با آی پی ایران در دسترس نیست');
         setTimeout(() => setInternetError(''), 5000);
         return;
       }
@@ -71,15 +73,30 @@ const Login = () => {
           )}
         </div>
 
-        <div>
+        <div className="relative">
           <input
             value={pass}
             onChange={(e) => setPass(e.target.value)}
-            className="outline-none border-b border-white w-full p-2 bg-transparent"
-            type="password"
+            className="outline-none border-b border-white w-full p-2 pr-10 bg-transparent"
+            type={eyeOpen ? 'text' : 'password'}
             placeholder="رمز عبور"
           />
-          {errors.pass && <p className="text-red-400 text-sm">{errors.pass}</p>}
+
+          <button
+            type="button"
+            onClick={() => setEyeOpen(!eyeOpen)}
+            className="absolute top-1/2 right-2 -translate-y-1/2 text-gray-300 hover:text-white transition duration-200"
+          >
+            {eyeOpen ? (
+              <IoEyeOutline size={20} />
+            ) : (
+              <IoEyeOffOutline size={20} />
+            )}
+          </button>
+
+          {errors.pass && (
+            <p className="text-red-400 text-sm mt-1">{errors.pass}</p>
+          )}
         </div>
 
         <button

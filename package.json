@@ -22,6 +22,7 @@
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
     "react-use-draggable-scroll": "^0.4.7",
+    "slugify": "^1.6.6",
     "swiper": "^11.2.10",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.11",

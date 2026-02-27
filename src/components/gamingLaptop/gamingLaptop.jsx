@@ -9,16 +9,16 @@ import 'swiper/css';
 
 import gamingLaptops from '../../data/gamingLaptops.json';
 import { useNavigate } from 'react-router-dom';
+import { slugify } from '../../constants/slug/slugify';
 
 const GamingLaptop = ({ product }) => {
-  const { addToCart } = useCart();
   const { user } = useAuth();
-  const [loading, setLoading] = useState(false);
+  const [loadingId, setLoadingId] = useState(null);
   const navigate = useNavigate();
 
   const handleCLick = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoadingId(product.id);
 
     setTimeout(() => {
       navigate('/login');
@@ -28,7 +28,7 @@ const GamingLaptop = ({ product }) => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative max-w-7xl mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
+    <div className=" select-none relative max-w-[80rem] mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
       <button
         onClick={() => swiperRef.current.slidePrev()}
         className="cursor-pointer hidden lg:flex absolute rounded-l-2xl -right-3 top-[229.4px] bg-teal-800 shadow-md p-3 z-1"
@@ -113,29 +113,35 @@ const GamingLaptop = ({ product }) => {
                     <span className="text-yellow-600">★ {product.rating}</span>
                   </div>
                   <div className="border cursor-pointer transition-colors hover:text-green-800 hover:border-transparent hover:bg-green-100 flex gap-1 justify-center items-center w-full mt-3 py-1 rounded">
-                    {loading ? (
+                    {loadingId === product.id ? (
                       <>
-                        <Spinner />
+                        <div className="w-5 h-5 border-2 border-teal-700 border-t-transparent rounded-full animate-spin"></div>
                       </>
                     ) : (
                       <>
-                        {user ? (
-                          <>
-                            <button
-                              className="cursor-pointer flex items-center gap-1"
-                              onClick={() => addToCart(product)}
-                            >
-                              افزودن به سبد خرید
+                        <button
+                          onClick={() => {
+                            setLoadingId(product.id);
+                            setTimeout(() => {
+                              navigate(
+                                `/laptop/${product.id}/${slugify(product.name)}`
+                              );
+                            }, 800);
+                          }}
+                          disabled={product.id == loadingId}
+                          className="cursor-pointer flex items-center gap-1"
+                        >
+                          {loadingId === product.id ? (
+                            <div className="flex items-center justify-center">
+                              <div className="w-5 h-5 border-2 border-gray-300 border-t-teal-700 rounded-full animate-spin"></div>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-0.5">
+                              <span>مشاهده محصول</span>
                               <IoCartOutline size={15} />
-                            </button>
-                          </>
-                        ) : (
-                          <>
-                            <button onClick={handleCLick} disabled={loading}>
-                              برای خرید وارد حساب شوید
-                            </button>
-                          </>
-                        )}
+                            </div>
+                          )}
+                        </button>
                       </>
                     )}
                   </div>

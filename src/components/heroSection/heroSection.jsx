@@ -30,7 +30,7 @@ const ResposiveHeroSection = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className="mx-3 select-none max-w-7xl lg:mx-auto my-6 flex flex-col lg:flex-row gap-4 relative">
+    <div className="mx-3 select-none max-w-[80rem] lg:mx-auto my-6 flex flex-col lg:flex-row gap-4 relative">
       <div className="w-full lg:w-3/4 h-60 lg:h-100 relative">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -49,7 +49,7 @@ const ResposiveHeroSection = () => {
               swiper.navigation.update();
             });
           }}
-          className="h-full object-contain rounded-xl overflow-hidden"
+          className="h-full object-contain rounded-3xl overflow-hidden"
         >
           {sliderImages.map((img, index) => (
             <SwiperSlide key={index} className="h-full">
@@ -77,14 +77,14 @@ const ResposiveHeroSection = () => {
       </div>
 
       <div className="w-full lg:w-1/4 flex lg:flex-col gap-4 h-40 lg:h-100">
-        <div className="flex-1 rounded-xl overflow-hidden">
+        <div className="flex-1 rounded-3xl overflow-hidden">
           <img
             src={banner1}
             className="w-full h-full object-cover"
             alt="banner1"
           />
         </div>
-        <div className="flex-1 rounded-xl overflow-hidden">
+        <div className="flex-1 rounded-3xl overflow-hidden">
           <img
             src={banner2}
             className="w-full h-full object-cover"

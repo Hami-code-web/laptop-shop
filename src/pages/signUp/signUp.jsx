@@ -125,7 +125,7 @@ const SignUp = () => {
         err.message?.includes('Failed to fetch') ||
         err.message?.includes('NetworkError')
       ) {
-        setInternetError('لطفا به اینترنت متصل شوید');
+        setInternetError('این وبسایت با آی پی ایران در دسترس نیست');
         setTimeout(() => setInternetError(''), 5000);
       }
 

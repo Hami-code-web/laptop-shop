@@ -5,20 +5,21 @@ import Spinner from '../loading/spinner';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoCartOutline } from 'react-icons/io5';
+import { slugify } from '../../constants/slug/slugify';
 import 'swiper/css';
 
 import bestSellersProducts from '../../data/bestSellersProducts.json';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const BestSellersProducts = ({ product }) => {
-  const { addToCart } = useCart();
   const { user } = useAuth();
-  const [loading, setLoading] = useState(false);
+  const [loadingId, setLoadingId] = useState(null);
   const navigate = useNavigate();
 
   const handleCLick = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoadingId(product.id);
 
     setTimeout(() => {
       navigate('/login');
@@ -44,7 +45,7 @@ const BestSellersProducts = ({ product }) => {
         </button>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 relative">
+      <div className="max-w-[80rem] mx-auto px-4 relative">
         <div className="flex justify-between items-center mb-6">
           <p className="text-2xl font-bold">محصولات پرفروش</p>
           <div className="cursor-pointer flex items-center gap-1 hover:text-teal-600 transition-colors">
@@ -111,29 +112,35 @@ const BestSellersProducts = ({ product }) => {
                     <span className="text-yellow-600">★ {product.rating}</span>
                   </div>
                   <div className="border cursor-pointer transition-colors hover:text-green-800 hover:border-transparent hover:bg-green-100 flex gap-1 justify-center items-center w-full mt-3 py-1 rounded">
-                    {loading ? (
+                    {loadingId === product.id ? (
                       <>
-                        <Spinner />
+                        <div className="w-5 h-5 border-2 border-teal-700 border-t-transparent rounded-full animate-spin"></div>
                       </>
                     ) : (
                       <>
-                        {user ? (
-                          <>
-                            <button
-                              className="cursor-pointer flex items-center gap-1"
-                              onClick={() => addToCart(product)}
-                            >
-                              افزودن به سبد خرید
+                        <button
+                          onClick={() => {
+                            setLoadingId(product.id);
+                            setTimeout(() => {
+                              navigate(
+                                `/bestsellers/${product.id}/${slugify(product.name)}`
+                              );
+                            }, 800);
+                          }}
+                          disabled={product.id == loadingId}
+                          className="cursor-pointer flex items-center gap-1"
+                        >
+                          {loadingId === product.id ? (
+                            <div className="flex items-center justify-center">
+                              <div className="w-5 h-5 border-2 border-gray-300 border-t-teal-700 rounded-full animate-spin"></div>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-0.5">
+                              <span>مشاهده محصول</span>
                               <IoCartOutline size={15} />
-                            </button>
-                          </>
-                        ) : (
-                          <>
-                            <button onClick={handleCLick} disabled={loading}>
-                              برای خرید وارد حساب شوید
-                            </button>
-                          </>
-                        )}
+                            </div>
+                          )}
+                        </button>
                       </>
                     )}
                   </div>

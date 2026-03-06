@@ -68,7 +68,15 @@ const GamingLaptop = ({ product }) => {
         >
           {gamingLaptops.products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="bg-white transition-all rounded-2xl duration-300 hover:-translate-y-3 hover:shadow">
+              <div
+                onClick={() => {
+                  setLoadingId(product.id);
+                  setTimeout(() => {
+                    navigate(`/laptop/${product.id}/${slugify(product.name)}`);
+                  }, 800);
+                }}
+                className="bg-white cursor-pointer transition-all rounded-2xl duration-300 hover:-translate-y-3 hover:shadow"
+              >
                 <div className="p-4">
                   <div className="relative top-5 flex justify-end">
                     {product.discount > 0 && (
@@ -95,8 +103,11 @@ const GamingLaptop = ({ product }) => {
                   <p className="text-gray-600 text-sm">{product.brand}</p>
                   <div className="flex items-center justify-between mt-3">
                     <div className="flex flex-col">
-                      <span className="text-lg font-bold text-teal-700">
+                      <span className="text-md line-through font-light text-gray-300">
                         {product.price.toLocaleString()} تومان
+                      </span>
+                      <span className="text-lg font-bold text-teal-700">
+                        {product.finalPrice.toLocaleString()} تومان
                       </span>
                     </div>
                   </div>
@@ -111,39 +122,6 @@ const GamingLaptop = ({ product }) => {
                       {product.inStock ? 'موجود' : 'ناموجود'}
                     </span>
                     <span className="text-yellow-600">★ {product.rating}</span>
-                  </div>
-                  <div className="border cursor-pointer transition-colors hover:text-green-800 hover:border-transparent hover:bg-green-100 flex gap-1 justify-center items-center w-full mt-3 py-1 rounded">
-                    {loadingId === product.id ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-teal-700 border-t-transparent rounded-full animate-spin"></div>
-                      </>
-                    ) : (
-                      <>
-                        <button
-                          onClick={() => {
-                            setLoadingId(product.id);
-                            setTimeout(() => {
-                              navigate(
-                                `/laptop/${product.id}/${slugify(product.name)}`
-                              );
-                            }, 800);
-                          }}
-                          disabled={product.id == loadingId}
-                          className="cursor-pointer flex items-center gap-1"
-                        >
-                          {loadingId === product.id ? (
-                            <div className="flex items-center justify-center">
-                              <div className="w-5 h-5 border-2 border-gray-300 border-t-teal-700 rounded-full animate-spin"></div>
-                            </div>
-                          ) : (
-                            <div className="flex items-center gap-0.5">
-                              <span>مشاهده محصول</span>
-                              <IoCartOutline size={15} />
-                            </div>
-                          )}
-                        </button>
-                      </>
-                    )}
                   </div>
                   <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[1px] h-40 bg-gray-100 rounded-full"></div>
                 </div>

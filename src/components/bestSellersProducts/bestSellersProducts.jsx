@@ -67,7 +67,17 @@ const BestSellersProducts = ({ product }) => {
         >
           {bestSellersProducts.products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div
+                onClick={() => {
+                  setLoadingId(product.id);
+                  setTimeout(() => {
+                    navigate(
+                      `/bestsellers/${product.id}/${slugify(product.name)}`
+                    );
+                  }, 800);
+                }}
+                className="bg-white cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="p-4">
                   <div className="relative top-5 flex justify-end">
                     {product.discount > 0 && (
@@ -110,39 +120,6 @@ const BestSellersProducts = ({ product }) => {
                       {product.inStock ? 'موجود' : 'ناموجود'}
                     </span>
                     <span className="text-yellow-600">★ {product.rating}</span>
-                  </div>
-                  <div className="border cursor-pointer transition-colors hover:text-green-800 hover:border-transparent hover:bg-green-100 flex gap-1 justify-center items-center w-full mt-3 py-1 rounded">
-                    {loadingId === product.id ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-teal-700 border-t-transparent rounded-full animate-spin"></div>
-                      </>
-                    ) : (
-                      <>
-                        <button
-                          onClick={() => {
-                            setLoadingId(product.id);
-                            setTimeout(() => {
-                              navigate(
-                                `/bestsellers/${product.id}/${slugify(product.name)}`
-                              );
-                            }, 800);
-                          }}
-                          disabled={product.id == loadingId}
-                          className="cursor-pointer flex items-center gap-1"
-                        >
-                          {loadingId === product.id ? (
-                            <div className="flex items-center justify-center">
-                              <div className="w-5 h-5 border-2 border-gray-300 border-t-teal-700 rounded-full animate-spin"></div>
-                            </div>
-                          ) : (
-                            <div className="flex items-center gap-0.5">
-                              <span>مشاهده محصول</span>
-                              <IoCartOutline size={15} />
-                            </div>
-                          )}
-                        </button>
-                      </>
-                    )}
                   </div>
                 </div>
               </div>

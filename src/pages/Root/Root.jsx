@@ -6,6 +6,7 @@ import DiscountProducts from '../../components/discountProducts';
 import BestSellersProducts from '../../components/bestSellersProducts';
 import GamingLaptop from '../../components/gamingLaptop/gamingLaptop';
 import BannerGrid from '../../components/banner/bannerGrid';
+import HalfBanner from '../../components/halfBanner/halfBanner';
 const Root = () => {
   return (
     <div dir="rtl" className=" font-font text-[#DCD7C9]">
@@ -15,6 +16,7 @@ const Root = () => {
       <DiscountProducts />
       <BannerGrid />
       <BestSellersProducts />
+      <HalfBanner />
       <GamingLaptop />
     </div>
   );

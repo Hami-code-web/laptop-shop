@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -33,10 +33,11 @@ const ResposiveHeroSection = () => {
     <div className="mx-3 select-none max-w-[80rem] lg:mx-auto my-6 flex flex-col lg:flex-row gap-4 relative">
       <div className="w-full lg:w-3/4 h-60 lg:h-100 relative">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1}
           loop={true}
           pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -49,14 +50,17 @@ const ResposiveHeroSection = () => {
               swiper.navigation.update();
             });
           }}
-          className="h-full object-contain rounded-3xl overflow-hidden"
+          className="h-full rounded-3xl overflow-hidden"
         >
           {sliderImages.map((img, index) => (
-            <SwiperSlide key={index} className="h-full">
+            <SwiperSlide
+              key={index}
+              className="h-full overflow-hidden rounded-3xl group"
+            >
               <img
                 src={img}
                 alt={`slide-${index}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer transition-transform duration-300 group-hover:scale-105"
               />
             </SwiperSlide>
           ))}
@@ -77,18 +81,18 @@ const ResposiveHeroSection = () => {
       </div>
 
       <div className="w-full lg:w-1/4 flex lg:flex-col gap-4 h-40 lg:h-100">
-        <div className="flex-1 rounded-3xl overflow-hidden">
+        <div className="flex-1 overflow-hidden rounded-3xl group">
           <img
             src={banner1}
-            className="w-full h-full object-cover"
             alt="banner1"
+            className="w-full h-full object-cover cursor-pointer transition-transform duration-300 group-hover:scale-105"
           />
         </div>
-        <div className="flex-1 rounded-3xl overflow-hidden">
+        <div className="flex-1 overflow-hidden rounded-3xl group">
           <img
             src={banner2}
-            className="w-full h-full object-cover"
             alt="banner2"
+            className="w-full h-full object-cover cursor-pointer transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       </div>

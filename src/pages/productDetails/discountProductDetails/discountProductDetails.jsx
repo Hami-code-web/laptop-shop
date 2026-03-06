@@ -8,7 +8,6 @@ const DiscountProductDetails = () => {
 
   const product = allProducts.find((p) => p.id === id);
 
-  //   console.log(product);
   if (!product) return <Navigate to="/404" replace />;
 
   return (

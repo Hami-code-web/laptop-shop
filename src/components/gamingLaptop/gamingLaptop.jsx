@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useCart } from '../../constants/context/cartContext';
 import { useAuth } from '../../constants/context/authContext';
-import Spinner from '../loading/spinner';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoCartOutline } from 'react-icons/io5';
@@ -13,27 +12,21 @@ import { slugify } from '../../constants/slug/slugify';
 
 const GamingLaptop = ({ product }) => {
   const { user } = useAuth();
-  const [loadingId, setLoadingId] = useState(null);
   const navigate = useNavigate();
-
-  const handleCLick = (e) => {
-    e.preventDefault();
-    setLoadingId(product.id);
-
-    setTimeout(() => {
-      navigate('/login');
-    }, 800);
-  };
 
   const swiperRef = useRef(null);
 
   return (
-    <div className=" select-none relative max-w-[80rem] mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
+    <div className=" rounded-2xl select-none relative max-w-[80rem] mx-auto mt-5 shadow-xl bg-white text-teal-800 py-8 z-10 overflow-hidden">
       <button
         onClick={() => swiperRef.current.slidePrev()}
         className="cursor-pointer hidden lg:flex absolute rounded-l-2xl -right-3 top-[229.4px] bg-teal-800 shadow-md p-3 z-1"
       >
-        <IoIosArrowForward color="white" size={22} />
+        <IoIosArrowForward
+          color="white"
+          className="flex justify-center relative right-1"
+          size={22}
+        />
       </button>
 
       <button
@@ -70,7 +63,6 @@ const GamingLaptop = ({ product }) => {
             <SwiperSlide key={product.id}>
               <div
                 onClick={() => {
-                  setLoadingId(product.id);
                   setTimeout(() => {
                     navigate(`/laptop/${product.id}/${slugify(product.name)}`);
                   }, 800);

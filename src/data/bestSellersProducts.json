@@ -10,6 +10,7 @@
       "category": "کیس",
       "img": "/images/bestSellersProductsImages/case/rgb-case.jfif",
       "images": [
+        "/images/bestSellersProductsImages/case/rgb-case.jfif",
         "/images/bestSellersProductsImages/case/rgb-case1.jfif",
         "/images/bestSellersProductsImages/case/rgb-case2.jfif",
         "/images/bestSellersProductsImages/case/rgb-case3.jfif"
@@ -17,6 +18,7 @@
       "price": 4200000,
       "finalPrice": 4200000,
       "brand": "کولر مستر",
+      "brandName": "کیس کولر مستر",
       "features": [
         "پنل شیشه‌ای",
         "سه فن RGB",
@@ -25,7 +27,12 @@
       ],
       "rating": 4.6,
       "stockCount": 9,
-      "colors": ["مشکی"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        }
+      ],
       "warranty": "24 ماه",
       "inStock": true
     },
@@ -36,6 +43,7 @@
       "category": "رم",
       "img": "/images/bestSellersProductsImages/ram/ram-corsair.jfif",
       "images": [
+        "/images/bestSellersProductsImages/ram/ram-corsair.jfif",
         "/images/bestSellersProductsImages/ram/ram-corsair1.jfif",
         "/images/bestSellersProductsImages/ram/ram-corsair2.jfif",
         "/images/bestSellersProductsImages/ram/ram-corsair3.jfif"
@@ -43,6 +51,7 @@
       "price": 4200000,
       "finalPrice": 4200000,
       "brand": "کورسیر",
+      "brandName": "رم کورسیر",
       "features": [
         "DDR4",
         "دو کاناله",
@@ -53,7 +62,16 @@
       ],
       "rating": 4.7,
       "stockCount": 3,
-      "colors": ["مشکی"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "سفید",
+          "hex": "#ffffff"
+        }
+      ],
       "warranty": "36 ماه",
       "inStock": true
     },
@@ -64,6 +82,7 @@
       "category": "کارت گرافیک",
       "img": "/images/bestSellersProductsImages/graphics/graphic-asus.jfif",
       "images": [
+        "/images/bestSellersProductsImages/graphics/graphic-asus.jfif",
         "/images/bestSellersProductsImages/graphics/graphic-asus1.jfif",
         "/images/bestSellersProductsImages/graphics/graphic-asus2.jfif",
         "/images/bestSellersProductsImages/graphics/graphic-asus3.jfif"
@@ -71,10 +90,20 @@
       "price": 64000000,
       "finalPrice": 64000000,
       "brand": "ایسوس",
+      "brandName": "کارت گرافیک ایسوس",
       "features": ["12GB GDDR6X", "DLSS 3", "Ray Tracing", "HDMI 2.1"],
       "rating": 4.9,
       "stockCount": 5,
-      "colors": ["مشکی"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "سفید",
+          "hex": "#ffffff"
+        }
+      ],
       "warranty": "36 ماه",
       "inStock": true
     },
@@ -85,6 +114,7 @@
       "category": "پردازنده",
       "img": "/images/bestSellersProductsImages/cpu/intel-cpu.jfif",
       "images": [
+        "/images/bestSellersProductsImages/cpu/intel-cpu.jfif",
         "/images/bestSellersProductsImages/cpu/intel-cpu1.jfif",
         "/images/bestSellersProductsImages/cpu/intel-cpu2.jfif",
         "/images/bestSellersProductsImages/cpu/intel-cpu3.jfif"
@@ -92,10 +122,20 @@
       "price": 18500000,
       "finalPrice": 18500000,
       "brand": "اینتل",
+      "brandName": "پردازنده اینتل",
       "features": ["16 هسته", "فرکانس 5.4GHz", "سوکت LGA1700"],
       "rating": 4.9,
       "stockCount": 2,
-      "colors": ["نقره‌ای"],
+      "colors": [
+        {
+          "name": "نقره‌ای",
+          "hex": "#C0C0C0"
+        },
+        {
+          "name": "سفید",
+          "hex": "#ffffff"
+        }
+      ],
       "warranty": "36 ماه",
       "inStock": true
     },
@@ -106,6 +146,7 @@
       "category": "حافظه داخلی",
       "img": "/images/bestSellersProductsImages/ssd/samsung-ssd.jfif",
       "images": [
+        "/images/bestSellersProductsImages/ssd/samsung-ssd.jfif",
         "/images/bestSellersProductsImages/ssd/samsung-ssd1.jfif",
         "/images/bestSellersProductsImages/ssd/samsung-ssd2.jfif",
         "/images/bestSellersProductsImages/ssd/samsung-ssd3.jfif"
@@ -113,10 +154,20 @@
       "price": 2900000,
       "finalPrice": 2900000,
       "brand": "سامسونگ",
+      "brandName": "حافظه داخلی سامسونگ",
       "features": ["NVMe PCIe 4.0", "سرعت خواندن 7000MB/s", "طول عمر بالا"],
       "rating": 4.7,
       "stockCount": 8,
-      "colors": ["مشکی"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "سفید",
+          "hex": "#ffffff"
+        }
+      ],
       "warranty": "60 ماه",
       "inStock": true
     },
@@ -127,6 +178,7 @@
       "category": "مادربرد",
       "img": "/images/bestSellersProductsImages/motherboard/asus-motherboard.jfif",
       "images": [
+        "/images/bestSellersProductsImages/motherboard/asus-motherboard.jfif",
         "/images/bestSellersProductsImages/motherboard/asus-motherboard1.jfif",
         "/images/bestSellersProductsImages/motherboard/asus-motherboard2.jfif",
         "/images/bestSellersProductsImages/motherboard/asus-motherboard3.jfif"
@@ -134,10 +186,20 @@
       "price": 15500000,
       "finalPrice": 15500000,
       "brand": "ایسوس",
+      "brandName": "مادربرد ایسوس",
       "features": ["سوکت LGA1700", "WiFi 6E", "PCIe 5.0", "DDR5"],
       "rating": 4.8,
       "stockCount": 6,
-      "colors": ["مشکی", "نقره‌ای"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "نقره‌‌ای",
+          "hex": "C0C0C0"
+        }
+      ],
       "warranty": "36 ماه",
       "inStock": true
     },
@@ -148,6 +210,7 @@
       "category": "پاور",
       "img": "/images/bestSellersProductsImages/power/corsair-power.jfif",
       "images": [
+        "/images/bestSellersProductsImages/power/corsair-power.jfif",
         "/images/bestSellersProductsImages/power/corsair-power1.jfif",
         "/images/bestSellersProductsImages/power/corsair-power2.jfif",
         "/images/bestSellersProductsImages/power/corsair-power3.jfif"
@@ -155,10 +218,20 @@
       "price": 4200000,
       "Finalprice": 4200000,
       "brand": "کورسیر",
+      "brandName": "پاور کورسیر",
       "features": ["گواهی 80+ Gold", "فن بی‌صدا", "تمام ماژولار"],
       "rating": 4.6,
       "stockCount": 7,
-      "colors": ["مشکی"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "سفید",
+          "hex": "#ffffff"
+        }
+      ],
       "warranty": "60 ماه",
       "inStock": true
     },
@@ -169,6 +242,7 @@
       "category": "خنک‌کننده",
       "img": "/images/bestSellersProductsImages/fan/deepcooler-fan.jfif",
       "images": [
+        "/images/bestSellersProductsImages/fan/deepcooler-fan.jfif",
         "/images/bestSellersProductsImages/fan/deepcooler-fan1.jfif",
         "/images/bestSellersProductsImages/fan/deepcooler-fan2.jfif",
         "/images/bestSellersProductsImages/fan/deepcooler-fan3.jfif"
@@ -176,10 +250,20 @@
       "price": 3300000,
       "finalPrice": 3300000,
       "brand": "دیپ کول",
+      "brandName": "خنک‌کننده دیپ کول",
       "features": ["رادیاتور 240mm", "نورپردازی ARGB", "پمپ بی‌صدا"],
       "rating": 4.5,
       "stockCount": 4,
-      "colors": ["مشکی", "سفید"],
+      "colors": [
+        {
+          "name": "مشکی",
+          "hex": "#000000"
+        },
+        {
+          "name": "قرمز",
+          "hex": "#ec340f"
+        }
+      ],
       "warranty": "24 ماه",
       "inStock": true
     }

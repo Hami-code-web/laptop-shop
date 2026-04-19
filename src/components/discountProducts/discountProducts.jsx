@@ -1,31 +1,16 @@
 import React, { useRef, useState } from 'react';
 import { useCart } from '../../constants/context/cartContext';
 import { useAuth } from '../../constants/context/authContext';
-import Spinner from '../loading/spinner';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IoIosArrowForward } from 'react-icons/io';
-import { IoCartOutline } from 'react-icons/io5';
 import { slugify } from '../../constants/slug/slugify';
 import 'swiper/css';
 
 import discountProducts from '../../data/discountProducts.json';
-import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const BestSellersProducts = ({ product }) => {
-  const { user } = useAuth();
-  const [loadingId, setLoadingId] = useState(null);
   const navigate = useNavigate();
-
-  const handleCLick = (e) => {
-    e.preventDefault();
-    setLoadingId(product.id);
-
-    setTimeout(() => {
-      navigate('/login');
-    }, 800);
-  };
-
   const swiperRef = useRef(null);
 
   return (
@@ -68,7 +53,6 @@ const BestSellersProducts = ({ product }) => {
             <SwiperSlide key={product.id}>
               <div
                 onClick={() => {
-                  setLoadingId(product.id);
                   setTimeout(() => {
                     navigate(
                       `/discountproducts/${product.id}/${slugify(product.name)}`

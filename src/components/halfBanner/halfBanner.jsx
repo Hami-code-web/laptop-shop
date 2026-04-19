@@ -4,7 +4,7 @@ import secondHalfBanner from '/images/halfBanner/processor.jpg';
 
 const HalfBanner = () => {
   return (
-    <div className="max-w-[80rem] mx-auto my-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="max-w-[80rem] mx-auto my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="overflow-hidden rounded-3xl ">
         <img
           src={secondHalfBanner}

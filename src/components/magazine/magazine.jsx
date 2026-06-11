@@ -31,8 +31,8 @@ const Magazine = () => {
           loop={false}
         >
           {magazines.news.map((magazine) => (
-            <SwiperSlide key={magazine.id}>
-              <div className="hover:-translate-y-2 transition-all duration-300 group cursor-pointer bg-white p-4 rounded-3xl">
+            <SwiperSlide className="py-2.5" key={magazine.id}>
+              <div className=" hover:-translate-y-2 transition-all duration-300 group cursor-pointer bg-white p-4 rounded-3xl">
                 <div className="overflow-hidden rounded-xl group">
                   <img
                     src={magazine.img}

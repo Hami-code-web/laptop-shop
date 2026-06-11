@@ -4,6 +4,39 @@
   "currency": "تومان",
   "products": [
     {
+      "id": "H002",
+      "name": "هدفون بلوتوثی سونی مدل WH-CH520",
+      "enName": "Sony WH-CH520 Wireless Headphones",
+      "category": "هدست",
+      "img": "/images/discountProductsImages/sony/sony-headphone.jpg",
+      "images": [
+        "/images/discountProductsImages/sony/sony-headphone1.jpg",
+        "/images/discountProductsImages/sony/sony-headphone2.jpg",
+        "/images/discountProductsImages/sony/sony-headphone3.jpg"
+      ],
+      "price": 3500000,
+      "finalPrice": 2975000,
+      "brand": "سونی",
+      "brandName": "هدست سونی",
+      "inStock": true,
+      "features": [
+        "حذف نویز فعال",
+        "باتری 30 ساعته",
+        "بلوتوث 5.0",
+        "تا شو سریع"
+      ],
+      "rating": 4.9,
+      "stockCount": 6,
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "نقره‌ای", "hex": "#C0C0C0" },
+        { "name": "بژ", "hex": "#DBB98F" },
+        { "name": "سفید", "hex": "#FFFFFF" },
+        { "name": "سرمه‌ای", "hex": "#000080" }
+      ],
+      "warranty": "18 ماه"
+    },
+    {
       "id": "M002",
       "name": "ماوس مخصوص بازی ریزر مدل DeathAdder Essential",
       "enName": "Razer DeathAdder Essential Gaming Mouse",
@@ -15,14 +48,14 @@
         "/images/discountProductsImages/razer/razer-rgb3.png"
       ],
       "price": 3200000,
-      "discount": 20,
       "finalPrice": 2960000,
       "brand": "ریزر",
+      "brandName": "ماوس ریزر",
       "inStock": true,
       "features": ["DPI 16000", "7 دکمه programmable", "نورپردازی RGB", "سیمی"],
       "rating": 4.7,
       "stockCount": 5,
-      "colors": ["مشکی"],
+      "colors": [{ "name": "مشکی", "hex": "#000000" }],
       "warranty": "18 ماه"
     },
     {
@@ -37,9 +70,9 @@
         "/images/discountProductsImages/corsair/corsair-keyboard3.jpg"
       ],
       "price": 2200000,
-      "discount": 10,
       "finalPrice": 1980000,
       "brand": "کورسیر",
+      "brandName": "کیبورد کورسیر",
       "inStock": true,
       "features": [
         "سوئیچ Cherry MX Red",
@@ -49,7 +82,7 @@
       ],
       "rating": 4.8,
       "stockCount": 2,
-      "colors": ["مشکی"],
+      "colors": [{ "name": "مشکی", "hex": "#000000" }],
       "warranty": "24 ماه"
     },
     {
@@ -64,9 +97,9 @@
         "/images/discountProductsImages/logitech/logitec3.webp"
       ],
       "price": 850000,
-      "discount": 15,
       "finalPrice": 722500,
       "brand": "لاجیتک",
+      "brandName": "ماوس لاجیتک",
       "inStock": true,
       "features": [
         "حسگر نوری",
@@ -76,7 +109,11 @@
       ],
       "rating": 4.5,
       "stockCount": 7,
-      "colors": ["مشکی", "سفید", "نقره‌ای"],
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "سفید", "hex": "#ffffff" },
+        { "name": "نقره‌ای", "hex": "#C0C0C0" }
+      ],
       "warranty": "24 ماه"
     },
     {
@@ -91,9 +128,9 @@
         "/images/discountProductsImages/steelseries/steelseries-headset3.webp"
       ],
       "price": 1800000,
-      "discount": 25,
       "finalPrice": 1350000,
       "brand": "استیل سریز",
+      "brandName": "هدست استیل سریز",
       "inStock": true,
       "features": [
         "7.1 surround",
@@ -103,7 +140,10 @@
       ],
       "rating": 4.6,
       "stockCount": 8,
-      "colors": ["مشکی", "سفید"],
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "سفید", "hex": "#ffffff" }
+      ],
       "warranty": "24 ماه"
     },
     {
@@ -118,14 +158,14 @@
         "/images/discountProductsImages/asus/rog-monitor3.jfif"
       ],
       "price": 9500000,
-      "discount": 12,
       "finalPrice": 8360000,
       "brand": "ایسوس",
+      "brandName": "مانیتور ایسوس",
       "inStock": true,
       "features": ["رزولوشن QHD", "165Hz", "IPS", "HDR"],
       "rating": 4.8,
       "stockCount": 4,
-      "colors": ["مشکی"],
+      "colors": [{ "name": "مشکی", "hex": "#000000" }],
       "warranty": "36 ماه"
     },
     {
@@ -140,9 +180,9 @@
         "/images/discountProductsImages/keychron/keychron-keyboard3.jfif"
       ],
       "price": 19500000,
-      "discount": 5,
-      "finalPrice": 19025000,
+      "finalPrice": 17550000,
       "brand": "کیکرون",
+      "brandName": "کیبورد کیکرون",
       "inStock": true,
       "features": [
         "اتصال بلوتوث",
@@ -152,35 +192,11 @@
       ],
       "rating": 4.3,
       "stockCount": 3,
-      "colors": ["مشکی", "سفید"],
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "سفید", "hex": "#ffffff" }
+      ],
       "warranty": "12 ماه"
-    },
-    {
-      "id": "H002",
-      "name": "هدفون بلوتوثی سونی مدل WH-CH520",
-      "enName": "Sony WH-CH520 Wireless Headphones",
-      "category": "هدست",
-      "img": "/images/discountProductsImages/sony/sony-headphone.jpg",
-      "images": [
-        "/images/discountProductsImages/sony/sony-headphone1.jpg",
-        "/images/discountProductsImages/sony/sony-headphone2.jpg",
-        "/images/discountProductsImages/sony/sony-headphone3.jpg"
-      ],
-      "price": 3500000,
-      "discount": 15,
-      "finalPrice": 2975000,
-      "brand": "سونی",
-      "inStock": true,
-      "features": [
-        "حذف نویز فعال",
-        "باتری 30 ساعته",
-        "بلوتوث 5.0",
-        "تا شو سریع"
-      ],
-      "rating": 4.9,
-      "stockCount": 6,
-      "colors": ["مشکی", "نقره‌ای"],
-      "warranty": "18 ماه"
     },
     {
       "id": "MN002",
@@ -194,9 +210,9 @@
         "/images/discountProductsImages/lg/lg-ultrawide-monitor3.webp"
       ],
       "price": 11200000,
-      "discount": 8,
       "finalPrice": 10304000,
       "brand": "ال جی",
+      "brandName": "مانیتور ال جی",
       "inStock": true,
       "features": [
         "رزولوشن UltraWide FHD (2560×1080)",
@@ -208,7 +224,10 @@
       ],
       "rating": 4.7,
       "stockCount": 6,
-      "colors": ["سفید", "نقره‌ای"],
+      "colors": [
+        { "name": "سفید", "hex": "#ffffff" },
+        { "name": "نقره‌ای", "hex": "#C0C0C0" }
+      ],
       "warranty": "24 ماه"
     }
   ]

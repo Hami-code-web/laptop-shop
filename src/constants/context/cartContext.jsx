@@ -77,9 +77,13 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCart((prev) => {
-      const exists = prev.find((item) => item.id === product.id);
+      const exists = prev.find(
+        (item) =>
+          item.id === product.id &&
+          item.selectedColor?.hex === product.selectedColor?.hex
+      );
       if (exists) {
-        toast.warn('این محصول در سبد خرید شما وجود دارد.');
+        toast.warn('این محصول با این مشخصات در سبد خرید شما وجود دارد.');
         return prev;
       }
       toast.success('محصول با موفقیت به سبد خرید اضافه شد!');

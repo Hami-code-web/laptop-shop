@@ -77,7 +77,7 @@ const Login = () => {
           <input
             value={pass}
             onChange={(e) => setPass(e.target.value)}
-            className="outline-none border-b border-white w-full p-2 pr-10 bg-transparent"
+            className="  outline-none border-b border-white w-full"
             type={eyeOpen ? 'text' : 'password'}
             placeholder="رمز عبور"
           />

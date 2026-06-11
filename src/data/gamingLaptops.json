@@ -11,8 +11,12 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 78000000,
-      "finalPrice": 69000000,
-      "discount": 12,
+      "finalPrice": 70200000,
+
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "خاکستری", "hex": "#6B7280" }
+      ],
 
       "cpu": "Intel Core i7-13650HX",
       "gpu": "NVIDIA RTX 4060 8GB",
@@ -27,8 +31,7 @@
         "/images/gamingLaptopsImages/rog/rog3-G16.jpeg"
       ],
 
-      "description": "لپ‌تاپ گیمینگ ایسوس با طراحی خفن، کارت گرافیک RTX 4060 و سیستم خنک‌کننده قوی برای بازی‌های سنگین.",
-
+      "description": "لپ‌تاپ گیمینگ ایسوس با طراحی خفن...",
       "rating": 4.8,
       "inStock": true,
       "stockCount": 8,
@@ -43,8 +46,12 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 100000000,
-      "finalPrice": 72000000,
-      "discount": 28,
+      "finalPrice": 80000000,
+
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "قرمز", "hex": "#DC2626" }
+      ],
 
       "cpu": "Intel Core i7-13620H",
       "gpu": "NVIDIA RTX 4060 8GB",
@@ -59,8 +66,7 @@
         "/images/gamingLaptopsImages/msi/msi-katana3.jfif"
       ],
 
-      "description": "لپ‌تاپ خوش‌ ساخت ام‌اس‌آی با صفحه‌ی نمایش 144Hz و عملکرد عالی برای گیمرها.",
-
+      "description": "لپ‌تاپ خوش‌ ساخت ام‌اس‌آی...",
       "rating": 4.7,
       "inStock": true,
       "stockCount": 2,
@@ -75,8 +81,12 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 85000000,
-      "finalPrice": 80000000,
-      "discount": 6,
+      "finalPrice": 59500000,
+
+      "colors": [
+        { "name": "خاکستری", "hex": "#4B5563" },
+        { "name": "نقره‌ای", "hex": "#9CA3AF" }
+      ],
 
       "cpu": "AMD Ryzen 7 7745HX",
       "gpu": "NVIDIA RTX 4070 8GB",
@@ -91,8 +101,7 @@
         "/images/gamingLaptopsImages/lenovo/legion-lenovo3.jfif"
       ],
 
-      "description": "یکی از بهترین لپ‌تاپ‌های گیمینگ با پردازنده Ryzen قدرتمند.",
-
+      "description": "یکی از بهترین لپ‌تاپ‌های گیمینگ...",
       "rating": 4.9,
       "inStock": true,
       "stockCount": 7,
@@ -107,8 +116,9 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 77000000,
-      "finalPrice": 72000000,
-      "discount": 6,
+      "finalPrice": 76230000,
+
+      "colors": [{ "name": "مشکی", "hex": "#111827" }],
 
       "cpu": "Intel Core i7-13700HX",
       "gpu": "NVIDIA RTX 4070 8GB",
@@ -122,8 +132,8 @@
         "/images/gamingLaptopsImages/aser/predator-aser2.jfif",
         "/images/gamingLaptopsImages/aser/predator-aser3.jfif"
       ],
-      "description": "هیولای گیمینگ ایسر با عملکرد خیره‌کننده.",
 
+      "description": "هیولای گیمینگ ایسر...",
       "rating": 4.8,
       "inStock": true,
       "stockCount": 5,
@@ -138,8 +148,12 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 65000000,
-      "finalPrice": 62500000,
-      "discount": 4,
+      "finalPrice": 61750000,
+
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "سبز ارتشی", "hex": "#3F6212" }
+      ],
 
       "cpu": "Intel Core i7-13620H",
       "gpu": "NVIDIA RTX 4060 8GB",
@@ -153,8 +167,8 @@
         "/images/gamingLaptopsImages/tuf/tuf-asus2.jfif",
         "/images/gamingLaptopsImages/tuf/tuf-asus3.jfif"
       ],
-      "description": "لپ‌تاپ گیمینگ سری TUF با قدرت بالا.",
 
+      "description": "لپ‌تاپ گیمینگ سری TUF...",
       "rating": 4.7,
       "inStock": true,
       "stockCount": 2,
@@ -169,8 +183,12 @@
       "category": "لپ‌تاپ گیمینگ",
 
       "price": 125000000,
-      "finalPrice": 119000000,
-      "discount": 5,
+      "finalPrice": 120000000,
+
+      "colors": [
+        { "name": "مشکی", "hex": "#000000" },
+        { "name": "نقره‌ای", "hex": "#D1D5DB" }
+      ],
 
       "cpu": "Intel Core Ultra 9 275HX",
       "gpu": "NVIDIA RTX 5080 16GB GDDR7",
@@ -184,8 +202,8 @@
         "/images/gamingLaptopsImages/omen/omen-max2.jfif",
         "/images/gamingLaptopsImages/omen/omen-max3.jfif"
       ],
-      "description": "لپ‌تاپ گیمینگ فوق حرفه‌ای HP OMEN MAX 16 با پردازنده Core Ultra 9 و کارت گرافیک RTX 5080 مناسب اجرای جدیدترین بازی‌ها، رندرینگ و کارهای سنگین. دارای نمایشگر 240Hz با وضوح 2560×1600 و حافظه DDR5 پرسرعت.",
 
+      "description": "لپ‌تاپ گیمینگ فوق حرفه‌ای HP OMEN...",
       "rating": 4.9,
       "inStock": true,
       "stockCount": 5,

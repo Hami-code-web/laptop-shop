@@ -14,7 +14,7 @@ const BestSellersProducts = ({ product }) => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative bg-teal-100 text-teal-800 py-8">
+    <div className=" select-none relative bg-teal-100 text-teal-800 py-8">
       <div className="absolute bottom-[72px] flex gap-2">
         <button
           onClick={() => swiperRef.current.slidePrev()}
@@ -63,9 +63,12 @@ const BestSellersProducts = ({ product }) => {
               >
                 <div className="p-4">
                   <div className="relative top-5 flex justify-end">
-                    {product.discount > 0 && (
+                    {product.finalPrice < product.price && (
                       <span className="flex items-center justify-center bg-red-100 text-red-800 text-sm font-medium p-2 rounded-xl">
-                        {product.discount}%
+                        {((product.price - product.finalPrice) /
+                          product.price) *
+                          100}
+                        %
                       </span>
                     )}
                   </div>

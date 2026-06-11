@@ -20,17 +20,24 @@
       "brand": "کولر مستر",
       "brandName": "کیس کولر مستر",
       "features": [
-        "پنل شیشه‌ای",
-        "سه فن RGB",
-        "پشتیبانی از ATX",
-        "مدیریت کابل"
+        "پنل کناری شیشه‌ای حرارت‌دیده (Tempered Glass)",
+        "سه فن RGB از پیش نصب‌شده با نورپردازی قابل تنظیم",
+        "پشتیبانی از مادربردهای ATX / Micro-ATX / Mini-ITX"
       ],
       "rating": 4.6,
       "stockCount": 9,
       "colors": [
         {
+          "name": "سفید",
+          "hex": "#fffffff"
+        },
+        {
           "name": "مشکی",
           "hex": "#000000"
+        },
+        {
+          "name": "نقره‌ای",
+          "hex": "#C0C0C0"
         }
       ],
       "warranty": "24 ماه",
@@ -197,7 +204,7 @@
         },
         {
           "name": "نقره‌‌ای",
-          "hex": "C0C0C0"
+          "hex": "#C0C0C0"
         }
       ],
       "warranty": "36 ماه",
@@ -216,7 +223,7 @@
         "/images/bestSellersProductsImages/power/corsair-power3.jfif"
       ],
       "price": 4200000,
-      "Finalprice": 4200000,
+      "finalPrice": 4200000,
       "brand": "کورسیر",
       "brandName": "پاور کورسیر",
       "features": ["گواهی 80+ Gold", "فن بی‌صدا", "تمام ماژولار"],

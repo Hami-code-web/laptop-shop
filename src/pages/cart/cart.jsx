@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import Nav from '../../components/nav/nav';
+import Footer from '../../components/footer/footer';
 import empty from '../../../public/images/empty-cart.svg';
 import { MdOutlineShoppingBag } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
@@ -52,11 +53,14 @@ const Cart = () => {
       sum + (item.finalPrice || item.price || 0) * (item.quantity || 1),
     0
   );
+
   const baseClass =
     'flex items-center justify-center gap-2 rounded-xl border md:col-span-3 text-center text-md font-semibold py-4 transition-colors';
   const loadingClass = 'bg-white text-gray-400';
   const normalClass =
     'text-gray-700 hover:bg-[#383d45] hover:text-gray-100 cursor-pointer';
+  console.log('My Cart Items:', cart);
+
   return (
     <div dir="rtl" className="min-h-screen bg-gray-50">
       <Header />
@@ -122,13 +126,26 @@ const Cart = () => {
                         برند: {item.brand}
                       </p>
 
+                      <div className="flex gap-1">
+                        <p className="text-gray-600 text-xs">
+                          رنگ: {item.selectedColor?.name}
+                        </p>
+                        <span
+                          className="h-4 w-4 ring-1 ring-offset-1 ring-gray-300 rounded-full"
+                          style={{ backgroundColor: item.selectedColor?.hex }}
+                        />
+                      </div>
+
                       <p className="text-gray-500 text-xs">
                         قیمت واحد: {item.price.toLocaleString()} تومان
                       </p>
 
                       <p className="text-green-600 text-xs font-semibold">
                         قیمت نهایی:{' '}
-                        {(item.finalPrice || item.price).toLocaleString()} تومان
+                        {(
+                          (item.finalPrice || item.price) * item.quantity
+                        ).toLocaleString()}{' '}
+                        تومان
                       </p>
 
                       <div className="flex items-center gap-2 mt-1">
@@ -154,7 +171,7 @@ const Cart = () => {
                   </div>
 
                   <button
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.cartItemId || item.id)}
                     className="bg-red-50 hover:bg-red-100 text-red-600 p-1 rounded-full"
                   >
                     <IoMdClose size={18} />

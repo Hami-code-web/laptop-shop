@@ -85,6 +85,7 @@ export const FavoriteProvider = ({ children }) => {
             brand: product.brand,
             price: product.finalPrice || product.price,
             img: product.img,
+            type: product.productType,
           },
         ];
       }

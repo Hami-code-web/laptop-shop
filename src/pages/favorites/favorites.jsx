@@ -7,10 +7,22 @@ import Footer from '../../components/footer/footer';
 import favorite from './empty.svg';
 import { Link } from 'react-router-dom';
 import { FaTrashAlt, FaShoppingCart } from 'react-icons/fa';
+import { slugify } from '../../constants/slug/slugify';
 
 const Favorites = () => {
   const { favorites, toggleFavorite } = useFavorite();
   const { addToCart } = useCart();
+
+  const getProductLink = (product) => {
+    switch (product.type) {
+      case 'laptop':
+        return `/laptop/${product.id}/${slugify(product.name)}`;
+      case 'bestsellers':
+        return `/bestsellers/${product.id}/${slugify(product.name)}`;
+      case 'discountproducts':
+        return `/discountproducts/${product.id}/${slugify(product.name)}`;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -98,7 +110,7 @@ const Favorites = () => {
                       </button>
 
                       <Link
-                        to={`/laptop/${product.id}`}
+                        to={getProductLink(product)}
                         className="text-xs font-bold bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-xl transition flex items-center"
                       >
                         مشاهده

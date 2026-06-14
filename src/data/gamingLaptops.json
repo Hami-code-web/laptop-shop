@@ -9,6 +9,7 @@
       "enName": "Ausus ROG Strix G16",
       "brand": "ایسوس",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 78000000,
       "finalPrice": 70200000,
@@ -44,6 +45,7 @@
       "enName": "MSI Katana 15",
       "brand": "ام‌اس‌آی",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 100000000,
       "finalPrice": 80000000,
@@ -79,6 +81,7 @@
       "enName": "Lenovo Legion 5 Pro",
       "brand": "لنوو",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 85000000,
       "finalPrice": 59500000,
@@ -114,6 +117,7 @@
       "enName": "Aser Predator Helios Neo 16",
       "brand": "ایسر",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 77000000,
       "finalPrice": 76230000,
@@ -146,6 +150,7 @@
       "enName": "Asus TUF Gaming F15",
       "brand": "ایسوس",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 65000000,
       "finalPrice": 61750000,
@@ -181,6 +186,7 @@
       "enName": "HP OMEN MAX Gaming 16-ah0097nr",
       "brand": "اچ‌ پی",
       "category": "لپ‌تاپ گیمینگ",
+      "productType": "laptop",
 
       "price": 125000000,
       "finalPrice": 120000000,

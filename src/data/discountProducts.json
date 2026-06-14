@@ -8,6 +8,7 @@
       "name": "هدفون بلوتوثی سونی مدل WH-CH520",
       "enName": "Sony WH-CH520 Wireless Headphones",
       "category": "هدست",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/sony/sony-headphone.jpg",
       "images": [
         "/images/discountProductsImages/sony/sony-headphone1.jpg",
@@ -41,6 +42,7 @@
       "name": "ماوس مخصوص بازی ریزر مدل DeathAdder Essential",
       "enName": "Razer DeathAdder Essential Gaming Mouse",
       "category": "ماوس",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/razer/razer-rgb.png",
       "images": [
         "/images/discountProductsImages/razer/razer-rgb1.png",
@@ -62,6 +64,7 @@
       "id": "K001",
       "name": "کیبورد مخصوص بازی کورسیر مدل K60 RGB Pro Low Profile Mechanical",
       "enName": "Corsair K60 RGB Pro Low Profile Mechanical Keyboard",
+      "productType": "discountproducts",
       "category": "کیبورد",
       "img": "/images/discountProductsImages/corsair/corsair-keyboard.jpg",
       "images": [
@@ -90,6 +93,7 @@
       "name": "ماوس لاجیتک مدل MX Vertical",
       "enName": "Logitech MX Vertical Mouse",
       "category": "ماوس",
+      "productType": "discoudiscountproductsntProducts",
       "img": "/images/discountProductsImages/logitech/logitec.webp",
       "images": [
         "/images/discountProductsImages/logitech/logitec1.webp",
@@ -121,6 +125,7 @@
       "name": "هدست گیمینگ استیل سریز مدل ARCTIS NOVA 1",
       "enName": "SteelSeries Arctis Nova 1 Gaming Headset",
       "category": "هدست",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/steelseries/steelseries-headset.webp",
       "images": [
         "/images/discountProductsImages/steelseries/steelseries-headset1.webp",
@@ -151,6 +156,7 @@
       "name": "مانیتور طراحی ایسوس مدل ProArt Display PA278QV سایز 27 اینچ",
       "enName": "Asus ProArt Display PA278QV 27 Inch Design Monitor",
       "category": "مانیتور",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/asus/rog-monitor.jfif",
       "images": [
         "/images/discountProductsImages/asus/rog-monitor1.jfif",
@@ -173,6 +179,7 @@
       "name": "کیبورد کیکورن مدل K3 Max RGB Red Switch",
       "enName": "Keychron K3 Max RGB Red Switch Keyboard",
       "category": "کیبورد",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/keychron/keychron-keyboard.jfif",
       "images": [
         "/images/discountProductsImages/keychron/keychron-keyboard1.jfif",
@@ -203,6 +210,7 @@
       "name": "مانیتور ال جی مدل 29WQ600-W سایز 29 اینچ",
       "enName": "LG 29WQ600-W 29 Inch Monitor",
       "category": "مانیتور",
+      "productType": "discountproducts",
       "img": "/images/discountProductsImages/lg/lg-ultrawide-monitor.webp",
       "images": [
         "/images/discountProductsImages/lg/lg-ultrawide-monitor1.webp",

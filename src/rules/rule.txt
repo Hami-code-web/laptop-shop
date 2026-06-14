@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /* ================= PRODUCTS ================= */
+    match /users/{productId} {
+
+      // همه بتوانند محصولات را بخوانند (برای فروشگاه)
+      allow read: if true;
+
+      // فقط ادمین بتواند اضافه / ویرایش / حذف کند
+      allow create, update, delete: if isAdmin();
+
+      // اعتبارسنجی ساخت محصول
+      allow create: if isAdmin() && validProduct(request.resource.data);
+
+      // اعتبارسنجی آپدیت محصول
+      allow update: if isAdmin() && validProduct(request.resource.data);
+    }
+
+    /* ================= USERS ================= */
+    match /users/{userId} {
+
+      // فقط خود کاربر به سند خودش
+      allow read, write: if isSignedIn() && request.auth.uid == userId;
+    }
+
+    /* ================= FUNCTIONS ================= */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.admin == true;
+    }
+
+    function validProduct(data) {
+      return data.keys().hasAll([
+        'name',
+        'price',
+        'finalPrice',
+        'brand',
+        'inStock'
+      ])
+      && data.name is string
+      && data.price is number
+      && data.finalPrice is number
+      && data.price >= data.finalPrice;
+    }
+
+    /* ================= DEFAULT DENY ================= */
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

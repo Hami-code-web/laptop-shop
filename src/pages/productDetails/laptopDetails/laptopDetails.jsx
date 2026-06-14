@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import laptopDetail from '../../../data/gamingLaptops.json';
 import Header from '../../../components/header/header';
 import Nav from '../../../components/nav/nav';
@@ -10,24 +10,24 @@ import { useCart } from '../../../constants/context/cartContext';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import { useFavorite } from '../../../constants/context/favoriteContext';
+import { useAuth } from '../../../constants/context/authContext';
 
 const LaptopDetails = () => {
   const { id } = useParams();
+  const { isProductLiked, toggleFavorite } = useFavorite();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const allProducts = laptopDetail.products;
   const product = allProducts.find((p) => p.id === id);
   const { cart, addToCart, removeFromCart } = useCart();
-  const LikeTheProduct = () => {
-    setIsLiked(true);
-    toast.error('این کالا به لیست علاقه‌مندی‌ها اضافه شد');
-  };
 
   if (!product) return <Navigate to="/404" replace />;
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]?.hex);
   const [selectedImage, setSelectedImage] = useState(product.img);
   const [isLoading, setIsLoading] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
 
   const features = [
     { label: 'پردازنده داخلی', value: product.cpu },
@@ -58,7 +58,7 @@ const LaptopDetails = () => {
         <section className=" flex items-center justify-center py-5 px-10 rounded-2xl shadow-sm border overflow-hidden mt-3 sm:mt-4">
           <div
             dir="rtl"
-            className="flex bg-gray-200 rounded-lg border-1 border-gray-400 text-center p-3 justify-center items-center "
+            className="flex bg-gray-200 rounded-lg border border-gray-400 text-center p-3 justify-center items-center "
           >
             <div className=" w-100 h-100 flex flex-col p-6 rounded-2xl">
               <h2 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -124,10 +124,15 @@ const LaptopDetails = () => {
                     (color) => color.hex === selectedColor
                   );
 
-                  addToCart({
-                    ...product,
-                    selectedColor: chosenColor,
-                  });
+                  {
+                    user
+                      ? addToCart({
+                          ...product,
+                          selectedColor: chosenColor,
+                        })
+                      : navigate('/login');
+                  }
+
                   setIsLoading(true);
                   setTimeout(() => {
                     setIsLoading(false);
@@ -227,18 +232,18 @@ const LaptopDetails = () => {
                   alt={product.name}
                   className="mix-blend-multiply w-full max-w-[220px] sm:max-w-[260px] md:max-w-[300px] object-contain transition-transform duration-500 ease-in-out hover:scale-105"
                 />
-                {isLiked ? (
+                {isProductLiked(product.id) ? (
                   <FaHeart
-                    onClick={() => setIsLiked(false)}
+                    onClick={() => toggleFavorite(product)}
                     title="حذف از علاقه‌مندی‌ها"
                     className="absolute right-0 top-0 cursor-pointer text-red-500"
                     size={25}
                   />
                 ) : (
                   <FaRegHeart
-                    onClick={() => LikeTheProduct()}
+                    onClick={() => toggleFavorite(product)}
                     title="افزودن به علاقه‌مندی‌ها"
-                    className="absolute right-0 top-0 cursor-pointer"
+                    className="absolute right-0 top-0 cursor-pointer text-gray-400 hover:text-red-500 transition-colors"
                     size={25}
                   />
                 )}

@@ -6,6 +6,7 @@ import Cart from '../pages/cart/cart';
 import LaptopDetails from '../pages/productDetails/laptopDetails/laptopDetails';
 import BestSellersDetails from '../pages/productDetails/bestSellersDetails/bestSellersDetails';
 import DiscountProductDetails from '../pages/productDetails/discountProductDetails/discountProductDetails';
+import Favorites from '../pages/favorites';
 import NotFound from '../pages/notFound/notFound';
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: '/discountproducts/:id/:slug',
     element: <DiscountProductDetails />,
+  },
+  {
+    path: '/lists/favorites',
+    element: <Favorites />,
   },
   // notfound page should be in the last
   {

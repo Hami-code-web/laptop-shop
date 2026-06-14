@@ -7,6 +7,10 @@ import { GoHome } from 'react-icons/go';
 import { FaAngleRight } from 'react-icons/fa';
 import { useState } from 'react';
 import { useCart } from '../../../constants/context/cartContext';
+import { useFavorite } from '../../../constants/context/favoriteContext';
+import { useAuth } from '../../../constants/context/authContext';
+import { useNavigate } from 'react-router-dom';
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
 
 const DiscountProductsDetails = () => {
   const { id } = useParams();
@@ -14,6 +18,9 @@ const DiscountProductsDetails = () => {
   const allProducts = DiscountProductsDetail.products;
   const product = allProducts.find((p) => p.id === id);
   const { cart, addToCart, removeFromCart } = useCart();
+  const { isProductLiked, toggleFavorite } = useFavorite();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   if (!product) return <Navigate to="/404" replace />;
 
@@ -108,10 +115,13 @@ const DiscountProductsDetails = () => {
                     (color) => color.hex === selectedColor
                   );
 
-                  addToCart({
-                    ...product,
-                    selectedColor: chosenColor,
-                  });
+                  user
+                    ? addToCart({
+                        ...product,
+                        selectedColor: chosenColor,
+                      })
+                    : navigate('/login');
+
                   setIsLoading(true);
                   setTimeout(() => {
                     setIsLoading(false);
@@ -202,12 +212,27 @@ const DiscountProductsDetails = () => {
             </div>
 
             <div className="md:col-span-1 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-start min-h-[260px] sm:min-h-[320px]">
-              <div className="relative w-full flex justify-center items-center flex-grow p-4">
+              <div className=" select-none relative w-full flex justify-center items-center flex-grow p-4">
                 <img
                   src={selectedImage}
                   alt={product.name}
                   className="mix-blend-multiply w-full max-w-[220px] sm:max-w-[260px] md:max-w-[300px] object-contain transition-transform duration-500 ease-in-out hover:scale-105"
                 />
+                {isProductLiked(product.id) ? (
+                  <FaHeart
+                    onClick={() => toggleFavorite(product)}
+                    title="حذف از علاقه‌مندی‌ها"
+                    className="absolute right-0 top-0 cursor-pointer text-red-500"
+                    size={25}
+                  />
+                ) : (
+                  <FaRegHeart
+                    onClick={() => toggleFavorite(product)}
+                    title="افزودن به علاقه‌مندی‌ها"
+                    className="absolute right-0 top-0 cursor-pointer text-gray-400 hover:text-red-500 transition-colors"
+                    size={25}
+                  />
+                )}
               </div>
 
               <div className="no-scrollbar mt-4 w-full flex justify-center gap-2 sm:gap-3 overflow-x-auto py-2 px-1">

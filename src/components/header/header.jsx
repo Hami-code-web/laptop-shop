@@ -6,15 +6,17 @@ import { LuSearch } from 'react-icons/lu';
 import { Link, useNavigate } from 'react-router-dom';
 import { CiLogin } from 'react-icons/ci';
 import { IoCartOutline } from 'react-icons/io5';
-import { FaRegUser } from 'react-icons/fa';
+import { FaHeart, FaRegUser } from 'react-icons/fa';
 import { useAuth } from '../../constants/context/authContext';
 import { MdOutlineShoppingBag, MdLogout } from 'react-icons/md';
 import { FaRegHeart } from 'react-icons/fa';
 import { IoMdClose, IoIosArrowDown } from 'react-icons/io';
+import { useFavorite } from '../../constants/context/favoriteContext';
 
 const Header = () => {
   const { user, userData, logout, loading } = useAuth();
   const { cart } = useCart();
+  const { isProductLiked } = useFavorite();
 
   const totalItems = cart.reduce((sum, n) => sum + n.quantity, 0);
 
@@ -187,8 +189,12 @@ const Header = () => {
               </div>
               <hr className="h-[1px] w-[90%] mx-auto " />
 
-              <div className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium">
-                <FaRegHeart size={22} /> علاقه مندی ها
+              <div
+                onClick={() => navigate('/lists/favorites')}
+                className="cursor-pointer flex gap-2 items-center px-5 text-gray-800 font-medium"
+              >
+                <FaRegHeart size={22} />
+                علاقه مندی ها
               </div>
               <hr className="h-[1px] w-[90%] mx-auto bg-gray-500" />
 

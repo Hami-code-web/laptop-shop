@@ -7,7 +7,10 @@ import { GoHome } from 'react-icons/go';
 import { FaAngleRight } from 'react-icons/fa';
 import { useState } from 'react';
 import { useCart } from '../../../constants/context/cartContext';
-import { fa } from 'zod/v4/locales';
+import { useFavorite } from '../../../constants/context/favoriteContext';
+import { useAuth } from '../../../constants/context/authContext';
+import { useNavigate } from 'react-router-dom';
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
 
 const BestSellersDetails = () => {
   const { id } = useParams();
@@ -15,6 +18,9 @@ const BestSellersDetails = () => {
   const allProducts = BestSellersDetail.products;
   const product = allProducts.find((p) => p.id === id);
   const { cart, addToCart, removeFromCart } = useCart();
+  const { isProductLiked, toggleFavorite } = useFavorite();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   if (!product) return <Navigate to="/404" replace />;
 
@@ -43,7 +49,7 @@ const BestSellersDetails = () => {
         <section className=" flex items-center justify-center px-10 rounded-2xl shadow-sm border overflow-hidden mt-3 sm:mt-4">
           <div
             dir="rtl"
-            className="flex bg-gray-200 rounded-lg border-1 border-gray-400 text-center p-3 justify-center items-center "
+            className="flex bg-gray-200 rounded-lg border-gray-400 text-center p-3 justify-center items-center "
           >
             <div className=" w-100 h-100 flex flex-col p-6 rounded-2xl">
               <h2 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -110,10 +116,13 @@ const BestSellersDetails = () => {
                     (color) => color.hex === selectedColor
                   );
 
-                  addToCart({
-                    ...product,
-                    selectedColor: chosenColor,
-                  });
+                  user
+                    ? addToCart({
+                        ...product,
+                        selectedColor: chosenColor,
+                      })
+                    : navigate('/login');
+
                   setIsLoading(true);
                   setTimeout(() => {
                     setIsLoading(false);
@@ -210,6 +219,21 @@ const BestSellersDetails = () => {
                   alt={product.name}
                   className="mix-blend-multiply w-full max-w-[220px] sm:max-w-[260px] md:max-w-[300px] object-contain transition-transform duration-500 ease-in-out hover:scale-105"
                 />
+                {isProductLiked(product.id) ? (
+                  <FaHeart
+                    onClick={() => toggleFavorite(product)}
+                    title="حذف از علاقه‌مندی‌ها"
+                    className="absolute right-0 top-0 cursor-pointer text-red-500"
+                    size={25}
+                  />
+                ) : (
+                  <FaRegHeart
+                    onClick={() => toggleFavorite(product)}
+                    title="افزودن به علاقه‌مندی‌ها"
+                    className="absolute right-0 top-0 cursor-pointer text-gray-400 hover:text-red-500 transition-colors"
+                    size={25}
+                  />
+                )}
               </div>
 
               <div className="no-scrollbar mt-4 w-full flex justify-center gap-2 sm:gap-3 overflow-x-auto py-2 px-1">

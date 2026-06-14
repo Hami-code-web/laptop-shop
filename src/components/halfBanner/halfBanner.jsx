@@ -4,20 +4,20 @@ import secondHalfBanner from '/images/halfBanner/processor.jpg';
 
 const HalfBanner = () => {
   return (
-    <div className="max-w-[80rem] mx-auto my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="overflow-hidden rounded-3xl ">
+    <div className="max-w-[80rem] mx-auto p-2 md:p-0 flex flex-col md:flex-row my-10 gap-7 justify-around">
+      <div className="overflow-hidden w-full rounded-3xl">
         <img
           src={secondHalfBanner}
-          className="w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
-          alt=""
+          className="w-full md:h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
+          alt="second banner"
         />
       </div>
 
-      <div className="overflow-hidden rounded-3xl ">
+      <div className="overflow-hidden w-full rounded-3xl">
         <img
           src={firstHalfBanner}
-          className="w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
-          alt=""
+          className="w-full md:h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
+          alt="first banner"
         />
       </div>
     </div>
